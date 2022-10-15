@@ -1,0 +1,11 @@
+@import '../../Sass/variables';
+
+.pageBtn {
+  display: inline-block;
+  margin: 0 0.3rem;
+  padding: 1rem;
+}
+
+.isActive {
+  background-color: $royalred;
+}

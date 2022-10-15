@@ -1,0 +1,40 @@
+@import '../../../Sass/variables';
+
+.modal {
+  background-color: #fff;
+
+  position: fixed;
+  z-index: 1500;
+  padding: 2rem 0;
+  max-width: 500px;
+  width: 90%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  transform: translateY(-100%);
+  box-shadow: 0 1rem 0.6rem rgba($color: #000000, $alpha: 0.2);
+  border-radius: 1rem;
+  overflow-y: auto;
+  transition: all 0.2s;
+  animation: slide-down 300ms ease-out forwards;
+
+  @media only screen and (min-width: $bp-md) {
+    max-width: 500px;
+    width: 50%;
+  }
+  &__title {
+    font-size: 4rem;
+    text-align: center;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(5rem);
+  }
+}

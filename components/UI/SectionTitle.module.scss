@@ -1,0 +1,39 @@
+@import '../../Sass/variables';
+
+.container {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0;
+
+  @media only screen and (min-width: $bp-md) {
+    font-size: 2rem;
+  }
+}
+
+.title {
+  text-transform: capitalize;
+}
+
+.subtitle {
+  display: inline-block;
+  margin: 1rem auto 5rem;
+
+  color: $dark-color;
+  text-transform: uppercase;
+  position: relative;
+
+  font-size: 1.5rem;
+  @media only screen and (min-width: $bp-md) {
+    font-size: 2rem;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: $light-gray-2;
+    bottom: -10px;
+    left: 0;
+  }
+}

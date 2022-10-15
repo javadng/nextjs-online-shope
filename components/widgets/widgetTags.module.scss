@@ -1,0 +1,17 @@
+@import '../../Sass/variables';
+.list {
+  font-size: 1.3rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  margin: 0.5rem;
+  background-color: $blue-light;
+  color: #fff !important;
+  border-radius: 2rem;
+
+  &:hover {
+    background-color: $royalred;
+  }
+}

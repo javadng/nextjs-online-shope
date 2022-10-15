@@ -1,0 +1,29 @@
+@import '../../Sass/variables';
+
+.option {
+  display: grid;
+  grid-template-columns: max-content minmax(15rem, 20rem);
+  align-items: center;
+  border: 1px solid #eee;
+  padding: 2rem 5rem;
+
+  &__text {
+    grid-column: 2 / -1;
+  }
+}
+
+.icon {
+  width: 4rem;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2rem;
+  display: block;
+  padding: 1rem 0;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: $dark-color;
+}

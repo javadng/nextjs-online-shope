@@ -1,0 +1,10 @@
+@import '../../Sass/variables';
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+
+  @media only screen and(min-width: $bp-xl) {
+    max-width: 1200px;
+  }
+}

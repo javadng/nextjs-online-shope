@@ -1,0 +1,67 @@
+@import '../../Sass/variables';
+
+.cart {
+  background-color: #fff;
+  font-size: 1.8rem;
+  display: flex;
+  height: 30rem;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 0 0.6rem rgba($color: #000000, $alpha: 0.2);
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: $blue-light;
+  }
+
+  .title {
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-family: 'Roboto';
+    margin: 4rem 0;
+  }
+
+  .desc {
+    font-style: italic;
+    padding: 0 2rem;
+  }
+
+  .btn {
+    text-transform: capitalize;
+    border: 1px solid $blue-light;
+    padding: 1.2rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: auto;
+    box-shadow: none;
+
+    &:hover {
+      background-color: $blue-light;
+      color: #fff;
+    }
+  }
+}
+
+.cart--center {
+  @media only screen and (min-width: $bp-lg) {
+    transform: scale(1.2);
+  }
+
+  &::before , .btn:hover {
+    background-color: $light-green;
+  }
+
+  .btn {
+    border-color: $light-green;
+  }
+}

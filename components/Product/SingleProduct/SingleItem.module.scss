@@ -1,0 +1,42 @@
+@import '../../../Sass/variables';
+
+.item {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  font-size: 2rem;
+  padding: 2rem 0;
+  background-color: #fff;
+  margin: 1rem 0;
+  grid-gap: 1rem;
+
+  border-top: 2px solid #eee;
+  // border-bottom: 2px solid #eee;
+
+  figure {
+    margin-right: 1rem;
+    width: 100%;
+    img {
+      height: 10rem;
+      width: 100%;
+    }
+  }
+}
+
+.detaile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: $dark-second;
+}
+
+.price {
+  color: $royalred;
+  font-weight: bold;
+  font-size: 2.5rem;
+  font-family: 'Roboto', sans-serif;
+}

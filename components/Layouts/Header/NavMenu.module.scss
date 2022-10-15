@@ -1,0 +1,95 @@
+@import '../../../Sass/variables';
+
+.nav {
+  position: fixed;
+  width: 380px;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  color: #fff;
+  font-size: 2rem;
+  padding: 5rem 2rem;
+  background-color: #1d1d1d;
+  z-index: 1000;
+  transition: transform 0.3s;
+  transform: translateX(-100%);
+
+  @media only screen and (max-width: $bp-sm) {
+    width: 250px;
+  }
+
+  @media only screen and (min-width: $bp-md) {
+    position: static;
+    background-color: transparent;
+    color: #1d1d1d;
+    width: 100%;
+    text-align: center;
+    height: auto;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    transform: translate(0);
+  }
+
+  li {
+    padding: 1rem;
+    margin: 2rem 0;
+
+    .activeLink {
+      color: $red;
+      &::after {
+        color: $red;
+        width: 100%;
+
+        @media only screen and (max-width: $bp-md) {
+          width: 0;
+        }
+      }
+    }
+
+    a {
+      transition: all 0.3s;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        transition: all 0.2s;
+        background-color: $royalred;
+      }
+
+      &:hover {
+        color: $red;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    @media only screen and (min-width: $bp-md) {
+      display: inline-block;
+      margin: 0;
+    }
+  }
+}
+
+.isActive {
+  transform: translate(0);
+}
+
+.closeBtn {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+/* txt */

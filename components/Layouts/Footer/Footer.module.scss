@@ -1,0 +1,9 @@
+@import '../../../Sass/variables';
+
+.footer {
+  padding: 2rem 0;
+  background-color: $dark-color;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+}

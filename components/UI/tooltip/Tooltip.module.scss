@@ -1,0 +1,49 @@
+@import '../../../Sass/variables';
+
+.tooltip {
+  z-index: 2000;
+  position: fixed;
+  right: 0.5rem;
+  top: 10vh;
+  font-size: 2rem;
+  color: #fff;
+  width: 30rem;
+  height: auto;
+  font-weight: bold;
+  background-color: $light-green;
+  padding: 1rem 2rem 2.5rem;
+  animation: slide-left 0.2s ease-out forwards;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(231, 231, 231);
+    left: 0;
+    bottom: 0;
+  }
+
+  .message {
+  }
+
+  .close {
+    margin-right: 2rem;
+    cursor: pointer;
+  }
+}
+
+.error {
+  background-color: $royalred;
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-2rem);
+  }
+}

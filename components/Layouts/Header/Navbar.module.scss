@@ -1,0 +1,123 @@
+@import '../../../Sass/variables';
+
+.nav {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 8rem;
+  align-items: center;
+
+  @media only screen and (min-width: $bp-md) {
+    grid-template-columns: max-content 1fr 15rem;
+  }
+
+  &__icons {
+    justify-self: end;
+    display: flex;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (min-width: $bp-md) {
+      justify-content: space-between;
+    }
+
+    img {
+      width: 3rem;
+      margin: 0 1rem;
+    }
+  }
+
+  .cart__quantity {
+    padding: 2rem 1rem;
+    font-size: 2rem;
+  }
+
+  &__toggeler {
+    background-color: #eee;
+    padding: 1rem;
+    line-height: 1rem;
+    height: 4.5rem;
+    width: 5.1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: block;
+
+    @media only screen and (min-width: $bp-md) {
+      display: none;
+    }
+
+    &:hover span.toggel--icon {
+      &::after {
+        top: -1rem;
+      }
+
+      &::before {
+        top: 1rem;
+      }
+    }
+
+    span.isActive--toggel {
+      background-color: transparent !important;
+    }
+
+    span.toggel--icon {
+      position: relative;
+      display: inline-block;
+
+      &,
+      &::after,
+      &::before {
+        width: 3rem;
+        height: 2px;
+        background-color: #000;
+        transition: all ease 0.1s;
+      }
+
+      &::after,
+      &::before {
+        position: absolute;
+        content: '';
+      }
+
+      &::before {
+        top: 0.8rem;
+      }
+
+      &::after {
+        top: -0.8rem;
+      }
+    }
+  }
+
+  &__shop--icon {
+    color: $light-green;
+    display: inline-block;
+    padding: 1rem 2rem;
+    box-shadow: inset 0 0 0.6rem rgba($color: #000000, $alpha: 0.1);
+    cursor: pointer;
+    margin: 0 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $red;
+      color: #fff;
+    }
+  }
+}
+
+.isActive--toggel {
+  &::after,
+  &::before {
+    top: 0 !important;
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+}

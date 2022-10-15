@@ -1,0 +1,32 @@
+@import '../../Sass/variables';
+
+h3 {
+  padding: 1rem 0.5rem;
+}
+.item {
+  font-size: 1.7rem;
+  cursor: pointer;
+  a {
+    display: inline-block;
+    padding: 1rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      transition: all 0.3s;
+      background-color: $blue-light;
+    }
+    &:hover {
+      color: $blue-light;
+    }
+  }
+
+  &:hover > a::after {
+    width: 100%;
+  }
+}

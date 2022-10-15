@@ -1,0 +1,28 @@
+.btn,
+.btn:active {
+  border: none;
+  outline: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: #fff;
+  box-shadow: 0 0 0.5rem rgba($color: #000000, $alpha: 0.3);
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-animated {
+  &:hover {
+    transform: translateY(-0.8rem);
+    box-shadow: 0 1rem 0.5rem rgba($color: #000000, $alpha: 0.3);
+  }
+
+  &:active {
+    transform: translateY(-0.6rem);
+    box-shadow: 0 0.5rem 0.5rem rgba($color: #000000, $alpha: 0.3);
+  }
+}

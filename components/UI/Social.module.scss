@@ -1,0 +1,36 @@
+@import '../../Sass/variables';
+.icons {
+  text-align: center;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+
+  @media only screen and (min-width: $bp-md) {
+    width: 50%;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+
+  .linkedin {
+    color: #3e91c5;
+  }
+
+  .google {
+    color: #dd4b39;
+  }
+
+  .twitter {
+    color: #1da1f2;
+  }
+
+  .facebook {
+    color: #4b70c0;
+  }
+}

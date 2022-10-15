@@ -1,0 +1,41 @@
+@import '../../Sass/variables';
+
+.about {
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: #fff;
+  transform: translateY(-5rem);
+  box-shadow: 0 0 0.6rem rgba($color: #000000, $alpha: 0.3);
+  max-width: 90% !important;
+  &__title {
+    padding: 2rem 0;
+  }
+
+  &__subtitle {
+    color: $dark-color;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+
+  &__desc {
+    color: $dark-color;
+    width: 80%;
+    margin: 0 auto 2rem;
+  }
+
+  &__btn {
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    margin: 2rem 0;
+    padding: 1.8rem 6rem;
+  }
+
+  &__bottom {
+    padding-top: 5rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+}

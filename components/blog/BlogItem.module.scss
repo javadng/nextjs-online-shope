@@ -1,0 +1,64 @@
+@import '../../Sass/variables';
+
+.blogitem {
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: 8rem minmax(20rem, 1fr);
+  grid-template-rows: repeat(2, 11rem);
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 3rem;
+  box-shadow:  0 0 0.4rem rgba($color: #000000, $alpha: 0.1);
+
+  &__cat {
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+  }
+
+  &__desc {
+    grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  &__title {
+    text-transform: capitalize;
+  }
+
+  &__date {
+    grid-row: 1 / -1;
+    align-self: center;
+  }
+
+  &__btn {
+    align-self: end;
+    font-size: 1.8rem;
+    padding: 1.5rem 3rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    border: 1px solid $royalred;
+    box-shadow: none;
+
+    &:hover {
+      color: #fff;
+      background-color: $royalred;
+    }
+  }
+
+  .day,
+  .month {
+    display: block;
+    padding: 2rem;
+    border: 1px solid #eee;
+  }
+
+  .day {
+    font-size: 5rem;
+  }
+
+  .month {
+    text-transform: capitalize;
+  }
+}

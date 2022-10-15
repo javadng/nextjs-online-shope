@@ -1,0 +1,39 @@
+@import '../../../Sass/variables';
+
+.banner {
+  text-align: center;
+  color: $light-gray;
+  background: #666 url('../../../assets/img/photo-1.jpg') no-repeat center;
+  background-size: cover;
+  height: 40rem;
+  font-size: 2.5rem;
+  background-blend-mode: multiply;
+
+  &__trand,
+  &__title,
+  &__info {
+    display: block;
+    padding: 0 2rem;
+  }
+
+  &__trand {
+    display: inline-block;
+    margin-top: 5rem;
+    padding-top: 3rem;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    padding-top: 5rem;
+    color: #fff;
+    font-size: 4rem;
+
+    @media only screen and (min-width: $bp-md) {
+      font-size: 7rem;
+    }
+  }
+
+  &__info {
+    padding-top: 2rem;
+  }
+}

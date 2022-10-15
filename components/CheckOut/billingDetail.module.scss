@@ -1,0 +1,49 @@
+@import '../../Sass/variables';
+
+.billing {
+  padding: 2rem 1rem;
+  grid-row: 1 / 2;
+  background-color: #fff;
+
+  @media only screen and (min-width: $bp-md) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .title {
+    font-size: 2rem;
+
+    padding: 2rem;
+  }
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  grid-template-rows: repeat(4, min-content);
+
+  input,
+  textarea {
+    padding: 0.8rem 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    transition: all 0.2s;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+
+    &:focus {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 5px 0.5rem rgba($color: #000000, $alpha: 0.2);
+    }
+  }
+
+  textarea {
+    resize: none;
+    grid-column: 1 /-1;
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+}

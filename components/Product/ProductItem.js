@@ -1,16 +1,12 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { useDispatch, useSelector } from "react-redux";
+import { cartActions } from "../../store/cart-slice";
+import { uiActions } from "../../store/ui-slice";
 
-import { useDispatch, useSelector } from 'react-redux';
-import { cartActions } from '../../store/cart-slice';
-import { uiActions } from '../../store/ui-slice';
+import Link from "next/link";
 
-import { Link } from 'react-router-dom';
-
-import Button from '../UI/Button';
-import './ProductItem.scss';
-import InputChangeNumber from '../UI/InputChangeNumber';
-import React from 'react';
+import Button from "../UI/Button";
+import InputChangeNumber from "../UI/InputChangeNumber";
+import React from "react";
 
 const ProductItem = props => {
   const dispatch = useDispatch();
@@ -35,9 +31,9 @@ const ProductItem = props => {
 
     dispatch(
       uiActions.showNotification({
-        status: 'ADD_ITEM',
-        titile: '',
-        message: 'Item Added to cart',
+        status: "ADD_ITEM",
+        titile: "",
+        message: "Item Added to cart",
       })
     );
   };
@@ -46,7 +42,7 @@ const ProductItem = props => {
     cartAddBtn = (
       <Button className="addbtn" onClick={addToCartHandler}>
         <span className="btnText">Add to Cart</span>
-        <FontAwesomeIcon icon={solid('shopping-cart')} />
+        <FontAwesomeIcon icon={solid("shopping-cart")} />
       </Button>
     );
   } else {
@@ -66,8 +62,8 @@ const ProductItem = props => {
       <figure className="productitem__img">
         <img src={props.img} alt="product item" />
         <div className="productitem__icons">
-          <FontAwesomeIcon icon={solid('heart')} color="red" />
-          <FontAwesomeIcon icon={solid('user-circle')} color="#fff" />
+          <FontAwesomeIcon icon={solid("heart")} color="red" />
+          <FontAwesomeIcon icon={solid("user-circle")} color="#fff" />
         </div>
       </figure>
       <Link to={`/${id}`} className="productitem--title">

@@ -1,9 +1,8 @@
-import './Button.scss';
-
 const Button = props => {
-  const classes = props.className + ' btn';
+  const btnClass = `${props.className} btn`;
+
   return (
-    <button onClick={props.onClick} className={classes}>
+    <button onClick={props.onClick} className={btnClass}>
       {props.children}
     </button>
   );

@@ -1,13 +1,11 @@
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useDispatch } from 'react-redux';
-import { cartActions } from '../../store/cart-slice';
-import { uiActions } from '../../store/ui-slice';
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../store/cart-slice";
+import { uiActions } from "../../store/ui-slice";
 
-import classes from './InputChangeNumber.module.scss';
+import classes from "./InputChangeNumber.module.scss";
 
 const InputChangeNumber = props => {
-  const customClasses = `${props.className || ''} ${classes.number__procut}`;
+  const customClasses = `${props.className || ""} ${classes.number__procut}`;
   const { id, quantity, name, price } = props;
 
   const dispatch = useDispatch();
@@ -24,9 +22,9 @@ const InputChangeNumber = props => {
 
     dispatch(
       uiActions.showNotification({
-        status: 'ADD_ITEM',
-        titile: '',
-        message: 'Item Added to cart',
+        status: "ADD_ITEM",
+        titile: "",
+        message: "Item Added to cart",
       })
     );
   };
@@ -36,13 +34,13 @@ const InputChangeNumber = props => {
   };
   return (
     <div className={customClasses}>
-      {quantity === 1 && (
+      {/* {quantity === 1 && (
         <FontAwesomeIcon
           className={classes.trash}
-          icon={solid('trash')}
+          icon={solid("trash")}
           onClick={decreaseHandler}
         />
-      )}
+      )} */}
       {quantity > 1 && (
         <span className={classes.decrease} onClick={decreaseHandler}>
           -

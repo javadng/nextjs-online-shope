@@ -1,10 +1,10 @@
-import classes from './Cart.module.scss';
+import classes from "./Cart.module.scss";
 
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 
-import Modal from '../UI/Modal/Modal';
-import CartItem from './CartItem';
-import { NavLink } from 'react-router-dom';
+import Modal from "../UI/Modal/Modal";
+import CartItem from "./CartItem";
+import NavLink from "next/link";
 
 const Cart = props => {
   const cartSlice = useSelector(state => state.cart);
@@ -37,7 +37,7 @@ const Cart = props => {
           totalPrice : $ {totalPrice.toFixed(2)}
         </span>
         <NavLink
-          to="/checkout"
+          href="/checkout"
           onClick={props.togglerFn}
           className={`${classes.modal__btn} btn`}
         >

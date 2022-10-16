@@ -1,9 +1,9 @@
-@import '../../../Sass/variables';
+@import "../../Sass/variables";
 
 .banner {
   text-align: center;
   color: $light-gray;
-  background: #666 url('../../../assets/img/photo-1.jpg') no-repeat center;
+  background: #666 url("../../public/images/photo-1.jpg") no-repeat center;
   background-size: cover;
   height: 40rem;
   font-size: 2.5rem;

@@ -1,5 +1,5 @@
-import classes from './BlogItem.module.scss';
-import { Link } from 'react-router-dom';
+import classes from "./BlogItem.module.scss";
+import Link from "next/link";
 
 const BlogItem = props => {
   return (

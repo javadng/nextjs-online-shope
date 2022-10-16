@@ -1,10 +1,10 @@
-import { Fragment } from 'react';
-import { NavLink } from 'react-router-dom';
-import Overlay from '../../UI/Modal/Overlay';
-import classes from './NavMenu.module.scss';
+import { Fragment } from "react";
+import Link from "next/link";
+import Overlay from "../../UI/Modal/Overlay";
+import classes from "./NavMenu.module.scss";
 
 const NavMenu = props => {
-  const navClassActive = props.isActive ? classes.isActive : '';
+  const navClassActive = props.isActive ? classes.isActive : "";
 
   return (
     <Fragment>
@@ -16,70 +16,64 @@ const NavMenu = props => {
           </span>
         )}
         <li className={classes.nav__item}>
-          <NavLink
-            to="/home"
-            href="text"
+          <Link
+            href="/"
             className={({ isActive }) =>
-              isActive ? `${classes.activeLink}` : ''
+              isActive ? `${classes.activeLink}` : ""
             }
           >
             Home
-          </NavLink>
+          </Link>
         </li>
         <li className={classes.nav__item}>
-          <NavLink
-            to="/categories"
-            href="text"
+          <Link
+            href="/categories"
             className={({ isActive }) =>
-              isActive ? `${classes.activeLink}` : ''
+              isActive ? `${classes.activeLink}` : ""
             }
           >
             Products
-          </NavLink>
+          </Link>
         </li>
         <li className={classes.nav__item}>
-          <NavLink
-            to="/"
-            href="text"
+          <Link
+            href="/"
             className={({ isActive }) =>
-              isActive ? `${classes.activeLink}` : ''
+              isActive ? `${classes.activeLink}` : ""
             }
           >
             Demo
-          </NavLink>
+          </Link>
         </li>
         <li className={classes.nav__item}>
-          <NavLink
-            to="/blog"
-            href="text"
+          <Link
+            href="/blog"
             className={({ isActive }) =>
-              isActive ? `${classes.activeLink}` : ''
+              isActive ? `${classes.activeLink}` : ""
             }
           >
             Blog
-          </NavLink>
+          </Link>
         </li>
         <li className={classes.nav__item}>
-          <NavLink
-            to="/checkout"
-            href="text"
+          <Link
+            href="/checkout"
             className={({ isActive }) =>
-              isActive ? `${classes.activeLink}` : ''
+              isActive ? `${classes.activeLink}` : ""
             }
           >
             Order
-          </NavLink>
+          </Link>
         </li>
         <li className={classes.nav__item}>
-          <NavLink
-            to="/contact-us"
-            href="text"
+          <Link
+            href="/contact-us"
             className={({ isActive }) =>
-              isActive ? `${classes.activeLink}` : ''
+              isActive ? `${classes.activeLink}` : ""
             }
           >
             Contact Us
-          </NavLink>
+          </Link>
         </li>
       </ul>
     </Fragment>

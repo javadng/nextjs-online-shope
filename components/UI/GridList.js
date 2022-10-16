@@ -1,7 +1,5 @@
-import './GridList.scss';
-
 const GridList = props => {
-  const customClassName = `gridlist ${props.className || ''}`;
+  const customClassName = `gridlist ${props.className || ""}`;
   return (
     <div id={props.id} className={customClassName}>
       {props.children}

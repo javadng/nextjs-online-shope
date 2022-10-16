@@ -1,14 +1,14 @@
-import ProductItem from './ProductItem';
+import ProductItem from "./ProductItem";
 
-import GridList from '../UI/GridList';
-import React, { useEffect, useState } from 'react';
+import GridList from "../UI/GridList";
+import React, { useEffect, useState } from "react";
 
-import classes from './ProductLists.module.scss';
-import useFilter from '../../hooks/use-filter';
-import FilterItems from '../filter/FilterItems';
-import Pagination from '../pagination/Pagination';
-import LoadingSpinner from '../UI/spinners/LoadingSpinner';
-import ErrorMessage from '../UI/ErrorMessage';
+import classes from "./ProductLists.module.scss";
+import useFilter from "../../hooks/use-filter";
+import FilterItems from "../filter/FilterItems";
+import Pagination from "../pagination/Pagination";
+import LoadingSpinner from "../UI/spinners/LoadingSpinner";
+import ErrorMessage from "../UI/ErrorMessage";
 
 const ProductList = props => {
   const [priceLimit, setPriceLimit] = useState(500);
@@ -19,13 +19,11 @@ const ProductList = props => {
   let minPrice = 0;
   let maxPrice = 0;
 
-  // console.log(props.products);
-
   useEffect(() => {
     filterFunHandler(productsShown, priceLimit);
   }, [filterFunHandler, priceLimit, productsShown]);
 
-  if (props.notification?.status === 'ERROR') {
+  if (props.notification?.status === "ERROR") {
     productContent = <ErrorMessage content={props.notification.message} />;
   }
 
@@ -50,10 +48,10 @@ const ProductList = props => {
       <FilterItems
         setValue={setPriceLimit}
         min={minPrice}
-        max={maxPrice || ''}
+        max={maxPrice || ""}
       />
       <GridList className={classes.gridlist}>
-        {props.notification?.status === 'LOADING' && <LoadingSpinner />}
+        {props.notification?.status === "LOADING" && <LoadingSpinner />}
         {productContent}
         <Pagination
           setPostsState={setProductShown}

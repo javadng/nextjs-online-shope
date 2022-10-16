@@ -1,9 +1,7 @@
-import { Fragment } from 'react';
-import reactdom from 'react-dom';
-import classes from './Modal.module.scss';
-import Overlay from './Overlay';
-
-const modalElem = document.getElementById('modal');
+import { Fragment } from "react";
+import reactdom from "react-dom";
+import classes from "./Modal.module.scss";
+import Overlay from "./Overlay";
 
 const Modal = props => {
   const classNames = `${props.className} ${classes.modal}`;
@@ -15,7 +13,7 @@ const Modal = props => {
           <h1 className={classes.modal__title}>{props.title}</h1>
           {props.children}
         </ul>,
-        modalElem
+        document.getElementById("modal")
       )}
       <Overlay onClick={props.toggle} />
     </Fragment>

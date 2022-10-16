@@ -1,26 +1,26 @@
-import classes from './Pagination.module.scss';
-import Button from '../UI/Button';
-import { useEffect, useReducer } from 'react';
+import classes from "./Pagination.module.scss";
+import Button from "../UI/Button";
+import { useEffect, useReducer } from "react";
 
-import arrayCreator from '../../helpers/arrayCreatror';
-import postsSlicer from '../../helpers/postslicer';
+import arrayCreator from "../../lib/arrayCreatror";
+import postsSlicer from "../../lib/postslicer";
 
 const reducerFunction = (state, action) => {
-  if (action.type === 'NEXT_PAGE') {
+  if (action.type === "NEXT_PAGE") {
     return {
       currentPage: state.currentPage + 1,
       postPerPage: state.postPerPage,
     };
   }
 
-  if (action.type === 'PREV_PAGE') {
+  if (action.type === "PREV_PAGE") {
     return {
       currentPage: state.currentPage - 1,
       postPerPage: state.postPerPage,
     };
   }
 
-  if (action.type === 'CHANGE_NUM') {
+  if (action.type === "CHANGE_NUM") {
     return {
       currentPage: action.pageNum,
       postPerPage: state.postPerPage,
@@ -29,7 +29,7 @@ const reducerFunction = (state, action) => {
 };
 
 const Pagination = props => {
-  const PaginationClasses = `${classes.pageBtns} ${props.className || ''}`;
+  const PaginationClasses = `${classes.pageBtns} ${props.className || ""}`;
   const btnClassNames = `${classes.btn}`;
   let pageBtns;
 
@@ -48,11 +48,11 @@ const Pagination = props => {
   const allPages = Math.ceil(allPosts.length / pagesStates.postPerPage);
 
   const goToNextPage = () => {
-    dispatchPages({ type: 'NEXT_PAGE' });
+    dispatchPages({ type: "NEXT_PAGE" });
   };
 
   const goToPrevPage = () => {
-    dispatchPages({ type: 'PREV_PAGE' });
+    dispatchPages({ type: "PREV_PAGE" });
   };
 
   const changePage = e => {
@@ -60,7 +60,7 @@ const Pagination = props => {
 
     if (pageNum > allPages) return;
 
-    dispatchPages({ type: 'CHANGE_NUM', pageNum });
+    dispatchPages({ type: "CHANGE_NUM", pageNum });
   };
 
   useEffect(() => {

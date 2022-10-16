@@ -1,10 +1,8 @@
-import Button from '../UI/Button';
+import Button from "../UI/Button";
 
-import icon from '../../assets/img/favicon.png';
-
-import classes from './AboutUs.module.scss';
-import OurOptions from './OurOptions';
-import Container from '../UI/Container';
+import classes from "./AboutUs.module.scss";
+import OurOptions from "./OurOptions";
+import Container from "../UI/Container";
 
 const AboutUs = props => {
   return (
@@ -28,18 +26,12 @@ const AboutUs = props => {
         <OurOptions
           title="Free shipping"
           subTitle="Free for all over order $100"
-          icon={icon}
         />
         <OurOptions
           title="Gift Cards"
           subTitle="Free for all over order $100"
-          icon={icon}
         />
-        <OurOptions
-          title="Friendly Support"
-          subTitle="Serices support 24/07"
-          icon={icon}
-        />
+        <OurOptions title="Friendly Support" subTitle="Serices support 24/07" />
       </div>
     </Container>
   );

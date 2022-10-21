@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import WidgetContainer from './WidgetContiner';
-import classes from './widgetTags.module.scss';
+import Link from "next/link";
+import WidgetContainer from "./WidgetContiner";
+import classes from "./widgetTags.module.scss";
 
 const WidgetTags = props => {
   return (
@@ -8,8 +8,8 @@ const WidgetTags = props => {
       <h3>{props.sectionTitle}</h3>
       <div className={classes.list}>
         {props.Tags.map(tag => (
-          <Link key={tag.id} className={classes.tag} to={tag.link}>
-            {tag.title}
+          <Link key={tag.id} href={tag.link}>
+            <a className={classes.tag}>{tag.title}</a>
           </Link>
         ))}
       </div>

@@ -1,55 +1,55 @@
-import WidgetLinks from '../../widgets/WidgetLinks';
-import WidgetTags from '../../widgets/WidgetTags';
-import classes from './sidebar.module.scss';
+import WidgetLinks from "../../widgets/WidgetLinks";
+import WidgetTags from "../../widgets/WidgetTags";
+import classes from "./sidebar.module.scss";
 
 const DUMMY__LINKS = [
   {
-    id: 'l1',
-    title: 'All products',
-    link: '/home',
+    id: "l1",
+    title: "All products",
+    link: "/",
   },
   {
-    id: 'l2',
-    title: 'New products',
-    link: '/home',
+    id: "l2",
+    title: "New products",
+    link: "/home",
   },
   {
-    id: 'l3',
-    title: 'Top Offers',
-    link: '/home',
+    id: "l3",
+    title: "Top Offers",
+    link: "/home",
   },
   {
-    id: 'l4',
-    title: 'All products',
-    link: '/home',
+    id: "l4",
+    title: "All products",
+    link: "/home",
   },
   {
-    id: 'l6',
-    title: 'All products',
-    link: '/home',
+    id: "l6",
+    title: "All products",
+    link: "/home",
   },
 ];
 
 const DUMMY__Tags = [
   {
-    id: 't1',
-    link: '/home',
-    title: 'Samsumg S21',
+    id: "t1",
+    link: "/",
+    title: "Samsumg S21",
   },
   {
-    id: 't2',
-    link: '/home',
-    title: 'Top Products',
+    id: "t2",
+    link: "/",
+    title: "Top Products",
   },
   {
-    id: 't3',
-    link: '/home',
-    title: 'Image',
+    id: "t3",
+    link: "/",
+    title: "Image",
   },
   {
-    id: 't4',
-    link: '/home',
-    title: 'Red Scarf',
+    id: "t4",
+    link: "/",
+    title: "Red Scarf",
   },
 ];
 

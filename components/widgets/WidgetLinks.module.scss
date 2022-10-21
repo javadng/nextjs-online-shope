@@ -1,6 +1,6 @@
-@import '../../Sass/variables';
+@import "../../Sass/variables";
 
-h3 {
+h3.title {
   padding: 1rem 0.5rem;
 }
 .item {
@@ -12,7 +12,7 @@ h3 {
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;

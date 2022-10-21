@@ -280,6 +280,29 @@ body {
   margin-bottom: 5rem;
   /*  */
 }
+
+.blogs-page {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 100%;
+  margin: 2rem 0;
+  font-size: 2rem;
+  grid-gap: 2rem;
+
+  @media only screen and (min-width: $bp-md) {
+    grid-template-columns: minmax(25rem, 30rem) 1fr;
+    grid-gap: 7rem;
+  }
+}
+
+.side {
+  grid-row: 2 / 3;
+  @media only screen and (min-width: $bp-md) {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+}
+
 .overlay {
   position: fixed;
   width: 100vw;
@@ -292,11 +315,9 @@ body {
   background-color: #fff;
   color: $royalred;
   padding: 3rem 2rem;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   border-radius: 1rem;
-  text-decoration: underline;
-  font-style: italic;
   box-shadow: 2px 2px 0.4rem rgba($color: #000000, $alpha: 0.3);
 }
 

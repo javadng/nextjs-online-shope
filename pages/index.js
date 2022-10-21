@@ -5,8 +5,24 @@ import Products from "../components/Product/Products";
 import Blogs from "../components/blog/Blog";
 import getProductList from "../lib/getProducts";
 import getBlogsList from "../lib/getBlogsList";
+import ErrorMessage from "../components/UI/ErrorMessage";
 
 const HomePage = props => {
+  let pageContent;
+
+  if (props.error) {
+    pageContent = <ErrorMessage message={props.error} />;
+  }
+
+  if (!props.error) {
+    pageContent = (
+      <Fragment>
+        <Products products={props.products} />
+        <Blogs blogs={props.blogsList} />
+      </Fragment>
+    );
+  }
+
   return (
     <Fragment>
       <Banner
@@ -15,8 +31,7 @@ const HomePage = props => {
         desc="Responsive React.js WebApp"
       />
       <AboutUs />
-      <Products products={props.products} />
-      <Blogs blogs={props.blogsList} />
+      {pageContent}
     </Fragment>
   );
 };
@@ -24,14 +39,22 @@ const HomePage = props => {
 export default HomePage;
 
 export async function getStaticProps() {
-  const productData = await getProductList();
-  const blogPosts = await getBlogsList();
+  let errorMessage, productData, blogPosts;
+
+  try {
+    productData = await getProductList();
+    blogPosts = await getBlogsList();
+  } catch (error) {
+    errorMessage = error.message || "Error with getting data💥💥.";
+  }
 
   return {
     props: {
-      products: productData,
-      blogsList: blogPosts,
+      blogsList: blogPosts || null,
+      products: productData || null,
+      error: errorMessage || null,
     },
+    revalidate: 3600,
   };
 }
 

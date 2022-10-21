@@ -5,7 +5,9 @@ const uiSlice = createSlice({
   initialState: {},
   reducers: {
     //methods
-    showNotification(state, action) {},
+    showNotification(state, action) {
+      
+    },
   },
 });
 

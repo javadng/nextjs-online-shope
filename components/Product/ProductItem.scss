@@ -1,4 +1,4 @@
-@import '../../Sass/variables';
+@import "../../Sass/variables";
 
 .productitem {
   display: grid;
@@ -36,7 +36,7 @@
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       transition: all 0.2s ease-out;
       width: 100%;
@@ -63,6 +63,9 @@
     font-weight: bold;
     line-height: 2;
     border-radius: 1rem;
+    text-align: center;
+    cursor: pointer;
+
 
     &:hover {
       transform: scale(1.1);
@@ -109,7 +112,7 @@
     font-weight: bold;
     grid-row: 7 /8;
     grid-column: 1 / -1;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
   }
 
   .addbtn {

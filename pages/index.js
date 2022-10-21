@@ -3,8 +3,10 @@ import Banner from "../components/banner/banner";
 import AboutUs from "../components/AboutUs/AboutUs";
 import Products from "../components/Product/Products";
 import Blogs from "../components/blog/Blog";
+import getProductList from "../lib/getProducts";
+import getBlogsList from "../lib/getBlogsList";
 
-const HomePage = () => {
+const HomePage = props => {
   return (
     <Fragment>
       <Banner
@@ -13,10 +15,24 @@ const HomePage = () => {
         desc="Responsive React.js WebApp"
       />
       <AboutUs />
-      <Products />
-      <Blogs />
+      <Products products={props.products} />
+      <Blogs blogs={props.blogsList} />
     </Fragment>
   );
 };
 
 export default HomePage;
+
+export async function getStaticProps() {
+  const productData = await getProductList();
+  const blogPosts = await getBlogsList();
+
+  return {
+    props: {
+      products: productData,
+      blogsList: blogPosts,
+    },
+  };
+}
+
+// export async function getStaticPaths() {}

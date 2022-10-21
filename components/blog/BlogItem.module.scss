@@ -1,14 +1,14 @@
-@import '../../Sass/variables';
+@import "../../Sass/variables";
 
 .blogitem {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   display: grid;
-  grid-template-columns: 8rem minmax(20rem, 1fr);
-  grid-template-rows: repeat(2, 11rem);
+  grid-template-columns: 5rem minmax(10rem, 1fr);
+  grid-template-rows: repeat(2, max-content);
   background-color: #fff;
   border-radius: 1rem;
   padding: 3rem;
-  box-shadow:  0 0 0.4rem rgba($color: #000000, $alpha: 0.1);
+  box-shadow: 0 0 0.4rem rgba($color: #000000, $alpha: 0.1);
 
   &__cat {
     text-transform: capitalize;
@@ -30,16 +30,21 @@
   &__date {
     grid-row: 1 / -1;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
   }
 
   &__btn {
     align-self: end;
     font-size: 1.8rem;
-    padding: 1.5rem 3rem;
+    padding: 1rem;
     margin-top: 2rem;
     font-weight: bold;
     border: 1px solid $royalred;
     box-shadow: none;
+    cursor: pointer;
 
     &:hover {
       color: #fff;
@@ -49,14 +54,15 @@
 
   .day,
   .month {
+
     display: block;
-    padding: 2rem;
+    width: 100%;
+    padding: 2rem 1rem;
     border: 1px solid #eee;
+    text-align: center;
+    font-size: 1.6rem;
   }
 
-  .day {
-    font-size: 5rem;
-  }
 
   .month {
     text-transform: capitalize;

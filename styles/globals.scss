@@ -273,7 +273,7 @@ body {
 .gridlist {
   display: grid;
   position: relative;
-  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
   grid-row-gap: 3rem;
   grid-column-gap: 1.5rem;
 

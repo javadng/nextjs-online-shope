@@ -29,20 +29,20 @@ const ProductItem = props => {
       })
     );
 
-    dispatch(
-      uiActions.showNotification({
-        status: "ADD_ITEM",
-        titile: "",
-        message: "Item Added to cart",
-      })
-    );
+    // dispatch(
+    //   uiActions.showNotification({
+    //     status: "ADD_ITEM",
+    //     titile: "",
+    //     message: "Item Added to cart",
+    //   })
+    // );
   };
 
   if (!cartItemExisted) {
     cartAddBtn = (
       <Button className="addbtn" onClick={addToCartHandler}>
         <span className="btnText">Add to Cart</span>
-        <FontAwesomeIcon icon={solid("shopping-cart")} />
+        {/* <FontAwesomeIcon icon={solid("shopping-cart")} /> */}
       </Button>
     );
   } else {
@@ -62,12 +62,12 @@ const ProductItem = props => {
       <figure className="productitem__img">
         <img src={props.img} alt="product item" />
         <div className="productitem__icons">
-          <FontAwesomeIcon icon={solid("heart")} color="red" />
-          <FontAwesomeIcon icon={solid("user-circle")} color="#fff" />
+          {/* <FontAwesomeIcon icon={solid("heart")} color="red" />
+          <FontAwesomeIcon icon={solid("user-circle")} color="#fff" /> */}
         </div>
       </figure>
-      <Link to={`/${id}`} className="productitem--title">
-        {name} &rarr;
+      <Link href={`/${id}`}>
+        <span className="productitem--title">{name} &rarr;</span>
       </Link>
       <p className="productitem--desc">{description}</p>
       <span className="price">${price.toFixed(2)}</span>

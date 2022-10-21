@@ -1,12 +1,11 @@
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
-import Pagination from '../pagination/Pagination';
-import GridList from '../UI/GridList';
-import BlogItem from './BlogItem';
-import classes from './BlogList.module.scss';
+import { useState } from "react";
+import Pagination from "../pagination/Pagination";
+import GridList from "../UI/GridList";
+import BlogItem from "./BlogItem";
+import classes from "./BlogList.module.scss";
 
 const BlogList = props => {
-  const { homeBlog } = useSelector(state => state.blogsHome);
+  const { homeBlog } = props;
   const [blogsHomeState, setBlogsHome] = useState(homeBlog);
 
   return (
@@ -17,6 +16,7 @@ const BlogList = props => {
           id={item.id}
           date={item.date}
           title={item.title}
+          year={item.year}
           categories={item.categories}
         />
       ))}

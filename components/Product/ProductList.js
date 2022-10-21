@@ -56,7 +56,7 @@ const ProductList = props => {
         <Pagination
           setPostsState={setProductShown}
           currentPage={1}
-          postPerPage={4}
+          postPerPage={6}
           allPosts={props.products}
           className={classes.pagination}
         />

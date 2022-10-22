@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { cartActions } from "../../store/cart-slice";
 import { uiActions } from "../../store/ui-slice";
-
+import { cartActions } from "../../store/cart-slice";
+import { GiShoppingCart } from "react-icons/gi";
+import { AiFillHeart } from "react-icons/ai";
 import Link from "next/link";
 
 import Button from "../UI/Button";
@@ -29,20 +30,20 @@ const ProductItem = props => {
       })
     );
 
-    // dispatch(
-    //   uiActions.showNotification({
-    //     status: "ADD_ITEM",
-    //     titile: "",
-    //     message: "Item Added to cart",
-    //   })
-    // );
+    dispatch(
+      uiActions.showNotification({
+        status: "ADD_ITEM",
+        titile: "",
+        message: "Item Added to cart",
+      })
+    );
   };
 
   if (!cartItemExisted) {
     cartAddBtn = (
       <Button className="addbtn" onClick={addToCartHandler}>
         <span className="btnText">Add to Cart</span>
-        {/* <FontAwesomeIcon icon={solid("shopping-cart")} /> */}
+        <GiShoppingCart fontSize="3rem" />
       </Button>
     );
   } else {
@@ -62,8 +63,7 @@ const ProductItem = props => {
       <figure className="productitem__img">
         <img src={props.img} alt="product item" />
         <div className="productitem__icons">
-          {/* <FontAwesomeIcon icon={solid("heart")} color="red" />
-          <FontAwesomeIcon icon={solid("user-circle")} color="#fff" /> */}
+          <AiFillHeart color="red" />
         </div>
       </figure>
       <Link href={`/${id}`}>

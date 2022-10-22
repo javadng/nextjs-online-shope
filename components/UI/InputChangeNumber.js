@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 import { uiActions } from "../../store/ui-slice";
-
+import { FiTrash2 } from "react-icons/fi";
 import classes from "./InputChangeNumber.module.scss";
 
 const InputChangeNumber = props => {
@@ -34,13 +34,9 @@ const InputChangeNumber = props => {
   };
   return (
     <div className={customClasses}>
-      {/* {quantity === 1 && (
-        <FontAwesomeIcon
-          className={classes.trash}
-          icon={solid("trash")}
-          onClick={decreaseHandler}
-        />
-      )} */}
+      {quantity === 1 && (
+        <FiTrash2 className={classes.trash} onClick={decreaseHandler} />
+      )}
       {quantity > 1 && (
         <span className={classes.decrease} onClick={decreaseHandler}>
           -

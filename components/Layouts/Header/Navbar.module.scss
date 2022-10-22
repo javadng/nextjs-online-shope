@@ -1,4 +1,4 @@
-@import '../../../Sass/variables';
+@import "../../../Sass/variables";
 
 .nav {
   grid-template-columns: repeat(2, 1fr);
@@ -12,6 +12,7 @@
   &__icons {
     justify-self: end;
     display: flex;
+    align-items: center;
   }
 
   &__iconTitle {
@@ -81,7 +82,7 @@
       &::after,
       &::before {
         position: absolute;
-        content: '';
+        content: "";
       }
 
       &::before {
@@ -96,8 +97,10 @@
 
   &__shop--icon {
     color: $light-green;
-    display: inline-block;
-    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
     box-shadow: inset 0 0 0.6rem rgba($color: #000000, $alpha: 0.1);
     cursor: pointer;
     margin: 0 1rem;

@@ -5,9 +5,9 @@ import { useSelector } from "react-redux";
 import classes from "./Navbar.module.scss";
 import ContainerGrid from "../../UI/ContainerGrid";
 import NavMenu from "./NavMenu";
-// import navIcon from "../../../assets/img/favicon.png";
 import Cart from "../../Cart/Cart";
 import Image from "next/image";
+import { GiShoppingCart } from "react-icons/gi";
 
 const Navbar = props => {
   const [menuIsShown, setMenuIsShowen] = useState(false);
@@ -48,7 +48,7 @@ const Navbar = props => {
             onClick={modalShownHandler}
             className={classes["nav__shop--icon"]}
           >
-            {/* <FontAwesomeIcon icon={solid("shopping-cart")} size="lg" /> */}
+            <GiShoppingCart fontSize="3rem" />
             <b className={classes.cart__quantity}>{totalQuantity}</b>
           </span>
           <div className={classes.nav__toggeler} onClick={menuToggelerHandler}>

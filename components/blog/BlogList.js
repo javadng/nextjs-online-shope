@@ -25,7 +25,7 @@ const BlogList = props => {
         setPostsState={setBlogsHome}
         allPosts={homeBlog}
         currentPage={1}
-        postPerPage={3}
+        postPerPage={4}
       />
     </GridList>
   );

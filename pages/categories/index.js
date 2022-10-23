@@ -1,6 +1,7 @@
 import ProductList from "../../components/Product/ProductList";
 import SectionTitle from "../../components/UI/SectionTitle";
 import getProductList from "../../lib/getProducts";
+import ErrorMessage from "../../components/UI/ErrorMessage";
 
 const CategoriesPage = props => {
   const { products } = props;

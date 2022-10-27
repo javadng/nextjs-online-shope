@@ -8,8 +8,8 @@ class MyDocument extends Document {
         <body>
           <Main />
           <div id="tooltip"></div>
-          <div id="overlay"></div>
-          <div id="modal"></div>
+          <div id="overlay-root"></div>
+          <div id="modal-root"></div>
           <NextScript />
         </body>
       </Html>

@@ -8,6 +8,7 @@ import NavMenu from "./NavMenu";
 import Cart from "../../Cart/Cart";
 import Image from "next/image";
 import { GiShoppingCart } from "react-icons/gi";
+import Modal from "../../UI/Modal/Modal";
 
 const Navbar = props => {
   const [menuIsShown, setMenuIsShowen] = useState(false);
@@ -30,13 +31,15 @@ const Navbar = props => {
   return (
     <Fragment>
       {modalShown && (
-        <Cart modalState={modalShown} togglerFn={modalShownHandler} />
+        <Modal toggle={modalShownHandler} modalState={modalShown}>
+          <Cart />
+        </Modal>
       )}
       <ContainerGrid className={classes.nav}>
         <div className={classes.nav__title}>
           <Image
             alt="online shope icon"
-            src="/favicon.png"
+            src="/store-icon.png"
             width={30}
             height={30}
           />

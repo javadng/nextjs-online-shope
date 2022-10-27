@@ -6,6 +6,7 @@ const OurOptions = props => {
     <div className={classes.option}>
       <Image
         src="/favicon.png"
+        alt="option image"
         className={classes.icon}
         width={40}
         height={40}

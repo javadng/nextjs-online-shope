@@ -2,15 +2,15 @@ import classes from "./Cart.module.scss";
 
 import { useSelector } from "react-redux";
 
-import Modal from "../UI/Modal/Modal";
 import CartItem from "./CartItem";
 import NavLink from "next/link";
 
 const Cart = props => {
   const cartSlice = useSelector(state => state.cart);
+
   const { items, totalPrice } = cartSlice;
 
-  const modalContent = items.map(item => (
+  const cartContent = items.map(item => (
     <CartItem
       key={item.id}
       quantity={item.quantity}
@@ -23,28 +23,17 @@ const Cart = props => {
   ));
 
   return (
-    <Modal
-      shownState={props.modalState}
-      title="Your Cart"
-      className={classes.modal}
-      toggle={props.togglerFn}
-    >
-      {modalContent || (
-        <p className="center-text fs-2 warning-color">No Item Add some..</p>
-      )}
+    <ul>
+      {cartContent}
       <footer className={classes.cartFooter}>
-        <span className={`btn ${classes.totalPrice}`}>
+        <span className={classes.totalPrice}>
           totalPrice : $ {totalPrice.toFixed(2)}
         </span>
-        <NavLink
-          href="/checkout"
-          onClick={props.togglerFn}
-          className={`${classes.modal__btn} btn`}
-        >
-          Shopping &rarr;
+        <NavLink href="/checkout">
+          <span className={classes.modal__btn}>Shopping &rarr;</span>
         </NavLink>
       </footer>
-    </Modal>
+    </ul>
   );
 };
 

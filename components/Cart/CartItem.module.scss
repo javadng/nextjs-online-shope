@@ -1,4 +1,4 @@
-@import '../../Sass/variables';
+@import "../../Sass/variables";
 
 .productcart {
   display: grid;
@@ -33,16 +33,16 @@
       align-self: flex-start;
       text-align: center;
     }
+  }
+}
 
-    img {
-      object-fit: cover;
-      width: 18rem;
-      height: 18rem;
+.img__holder > span img {
+  object-fit: cover;
+  width: 18rem !important;
+  height: 18rem !important;
 
-      @media only screen and (max-width: $bp-xs) {
-        min-width: 33rem;
-      }
-    }
+  @media only screen and (max-width: $bp-xs) {
+    min-width: 33rem !important;
   }
 }
 

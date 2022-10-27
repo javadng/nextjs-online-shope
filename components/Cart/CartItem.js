@@ -1,9 +1,11 @@
-import InputChangeNumber from '../UI/InputChangeNumber';
-import classes from './CartItem.module.scss';
+import Image from "next/image";
+import InputChangeNumber from "../UI/InputChangeNumber";
+import classes from "./CartItem.module.scss";
 
 const CartItem = props => {
   const { id, img, totalPrice, quantity, name, price } = props;
 
+  console.log(img);
   return (
     <li className={classes.productcart}>
       <div className={classes.product__detail}>
@@ -11,7 +13,7 @@ const CartItem = props => {
         <span>{totalPrice.toFixed(2)} $</span>
       </div>
       <figure className={classes.img__holder}>
-        <img alt={name} src={img} />
+        <Image alt={name} src={img} width={100} height={100} />
       </figure>
       <InputChangeNumber
         price={price}

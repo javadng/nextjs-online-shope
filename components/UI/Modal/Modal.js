@@ -1,23 +1,28 @@
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import reactdom from "react-dom";
-import classes from "./Modal.module.scss";
 import Overlay from "./Overlay";
 
 const Modal = props => {
-  const classNames = `${props.className} ${classes.modal}`;
+  const modalClassNames = `${props.modalState ? "top-0" : ""} modal`;
+  const [isBrowser, setIsBrowser] = useState(false);
 
-  return (
-    <Fragment>
-      {reactdom.createPortal(
-        <ul className={classNames}>
-          <h1 className={classes.modal__title}>{props.title}</h1>
-          {props.children}
-        </ul>,
-        document.getElementById("modal")
-      )}
-      <Overlay onClick={props.toggle} />
-    </Fragment>
-  );
+  useEffect(() => {
+    setIsBrowser(true);
+  }, []);
+
+  if (isBrowser) {
+    return (
+      <Fragment>
+        {reactdom.createPortal(
+          <div className={modalClassNames}>{props.children}</div>,
+          document.getElementById("modal-root")
+        )}
+        <Overlay onClick={props.toggle} shown={props.modalState} />
+      </Fragment>
+    );
+  } else {
+    return null;
+  }
 };
 
 export default Modal;

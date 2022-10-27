@@ -8,6 +8,7 @@ import Link from "next/link";
 import Button from "../UI/Button";
 import InputChangeNumber from "../UI/InputChangeNumber";
 import React from "react";
+import Image from "next/image";
 
 const ProductItem = props => {
   const dispatch = useDispatch();
@@ -61,7 +62,7 @@ const ProductItem = props => {
   return (
     <div className="productitem">
       <figure className="productitem__img">
-        <img src={props.img} alt="product item" />
+        <Image src={props.img} layout="fill" alt="product item" />
         <div className="productitem__icons">
           <AiFillHeart color="red" />
         </div>

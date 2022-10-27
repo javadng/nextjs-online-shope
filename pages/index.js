@@ -6,6 +6,7 @@ import Blogs from "../components/blog/Blog";
 import getProductList from "../lib/getProducts";
 import getBlogsList from "../lib/getBlogsList";
 import ErrorMessage from "../components/UI/ErrorMessage";
+import Modal from "../components/UI/Modal/Modal";
 
 const HomePage = props => {
   let pageContent;
@@ -31,6 +32,11 @@ const HomePage = props => {
         desc="Responsive React.js WebApp"
       />
       <AboutUs />
+      <Modal
+        shownState={props.modalState}
+        title="Your Cart"
+        toggle={props.togglerFn}
+      />
       {pageContent}
     </Fragment>
   );

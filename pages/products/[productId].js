@@ -13,7 +13,7 @@ const SingleProduct = props => {
   if (productData) {
     pageContent = (
       <div className={classes.single__product}>
-        <ProductRelated className={classes.related} />
+        {/* <ProductRelated className={classes.related} /> */}
         <ProductDetail
           productDetail={productData}
           className={classes.detaile}

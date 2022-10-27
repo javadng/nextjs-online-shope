@@ -30,8 +30,6 @@ const ProductDetail = props => {
     quantity,
   } = props.productDetail;
 
-  // const productInfo = props.productDetail;
-
   const [imgUrlState, setImgUrlState] = useState(baseImgUrl);
 
   const increaseHandler = () => {
@@ -55,7 +53,8 @@ const ProductDetail = props => {
   };
 
   const getImgUrlSource = e => {
-    const imgElemUrl = e.target.src;
+    const imgElemUrl = e.target.dataset.imgurl;
+
     if (!imgElemUrl) return;
 
     setImgUrlState(imgElemUrl);

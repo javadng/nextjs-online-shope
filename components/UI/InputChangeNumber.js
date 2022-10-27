@@ -42,7 +42,7 @@ const InputChangeNumber = props => {
           -
         </span>
       )}
-      <input type="number" min="0" disabled placeholder={quantity} />
+      <span className={classes.quantity}>{quantity}</span>
       <span className={classes.increase} onClick={increaseHandler}>
         +
       </span>

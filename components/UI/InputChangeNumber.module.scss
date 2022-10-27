@@ -26,6 +26,14 @@
     }
   }
 
+  .quantity {
+    text-align: center;
+    display: inline-block;
+    width: 60%;
+    background-color: transparent;
+    color: #000;
+  }
+
   input[type="number"] {
     text-align: center;
     display: inline-block;

@@ -1,10 +1,11 @@
-import classes from './SingleItem.module.scss';
+import Image from "next/image";
+import classes from "./SingleItem.module.scss";
 
 const SingleItem = props => {
   return (
     <li className={classes.item}>
       <figure>
-        <img src={props.img} alt="" />
+        <Image src={props.img} alt="" width={100} height={100} />
       </figure>
       <div className={classes.detaile}>
         <span className={classes.title}>{props.title}</span>

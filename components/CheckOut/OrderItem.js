@@ -1,13 +1,14 @@
-import InputChangeNumber from '../UI/InputChangeNumber';
-import classes from './orderItem.module.scss';
+import InputChangeNumber from "../UI/InputChangeNumber";
+import classes from "./orderItem.module.scss";
+import Image from "next/image";
 
 const OrderItem = props => {
-  const classNames = `${classes.item} ${props.className || ''}`;
+  const classNames = `${classes.item} ${props.className || ""}`;
 
   return (
     <li className={classNames}>
       <figure className={classes.item__img}>
-        <img src={props.image} alt={props.name} />
+        <Image src={props.image} alt={props.name} width={100} height={100} />
       </figure>
       <span className={classes.name}>
         {props.name} x {props.number}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import classes from "./BlogItem.module.scss";
 
@@ -7,7 +8,7 @@ const BlogItem = props => {
   return (
     <div className={classes.blog}>
       <figure className={classes.figureImg}>
-        <img src={props.image} alt="blog" />
+        <Image width={100} height={100} src={props.image} alt="blog" />
         <div className={classes["meta--time"]}>
           <span className={classes.date}>
             <em>{props.date}</em>

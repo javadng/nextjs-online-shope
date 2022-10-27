@@ -1,19 +1,20 @@
-import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { cartActions } from '../../../store/cart-slice';
-import { uiActions } from '../../../store/ui-slice';
-import Button from '../../UI/Button';
-import InputChangeNumber from '../../UI/InputChangeNumber';
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../../store/cart-slice";
+import { uiActions } from "../../../store/ui-slice";
+import Button from "../../UI/Button";
+import InputChangeNumber from "../../UI/InputChangeNumber";
 
-import classes from './ProductDetail.module.scss';
-import SingleTabs from './SingleTabs';
+import classes from "./ProductDetail.module.scss";
+import SingleTabs from "./SingleTabs";
 
 const ProductDetail = props => {
   const containerClasses = `${props.className} ${classes.product__container}`;
   const dispatch = useDispatch();
 
   useEffect(() => {
-    window.scrollTo({ behavior: 'smooth', top: '0px' });
+    window.scrollTo({ behavior: "smooth", top: "0px" });
   }, []);
 
   const {
@@ -46,9 +47,9 @@ const ProductDetail = props => {
 
     dispatch(
       uiActions.showNotification({
-        status: 'success',
-        titile: '',
-        message: 'Item Added to cart',
+        status: "success",
+        titile: "",
+        message: "Item Added to cart",
       })
     );
   };
@@ -64,10 +65,12 @@ const ProductDetail = props => {
     <div className={containerClasses}>
       <div className={classes.product__image}>
         <figure className={classes.figureImg}>
-          <img src={imgUrlState} alt={name} />
+          <Image src={imgUrlState} alt={name} width={100} height={100} />
           <div onClick={getImgUrlSource} className={classes.subimages}>
             {subImgsUrl.map(item => (
-              <img
+              <Image
+                width={100}
+                height={100}
                 key={item.id}
                 src={item.img}
                 className={classes.subimg}

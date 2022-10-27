@@ -1,4 +1,4 @@
-@import '../../../Sass/variables';
+@import "../../../Sass/variables";
 
 .product__container {
   display: grid;
@@ -28,6 +28,9 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 15rem;
   grid-row-gap: 2rem;
+
+  & > img {
+  }
 }
 
 .subimages {
@@ -42,7 +45,7 @@
   @media only screen and (min-width: $bp-lg) {
   }
 
-  img.subimg {
+  & > img {
     width: 15rem;
     height: 15rem;
     transition: all 0.2s;
@@ -76,7 +79,7 @@
 }
 
 .title {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 1rem 0;
   text-align: center;
 }
@@ -86,7 +89,7 @@
   color: $royalred;
   font-weight: bold;
   font-size: 3rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 1.5rem;
 }
 
@@ -160,7 +163,7 @@
     max-width: 100%;
   }
 
-  input[type='number'] {
+  input[type="number"] {
     height: 100%;
   }
   span {

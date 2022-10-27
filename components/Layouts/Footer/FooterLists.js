@@ -36,7 +36,7 @@ const FooterLists = props => {
           <Link href="/">Fearured</Link>
         </li>
         <li className={classes["List--item"]}>
-          <Link href="/">Men's Collections</Link>
+          <Link href="/">Mens Collections</Link>
         </li>
         <li className={classes["List--item"]}>
           <Link href="/">Top Products</Link>

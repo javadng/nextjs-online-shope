@@ -1,4 +1,4 @@
-@import '../../../Sass/variables';
+@import "../../../Sass/variables";
 
 .item {
   display: grid;
@@ -15,7 +15,7 @@
   figure {
     margin-right: 1rem;
     width: 100%;
-    img {
+    & > img {
       height: 10rem;
       width: 100%;
     }
@@ -38,5 +38,5 @@
   color: $royalred;
   font-weight: bold;
   font-size: 2.5rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }

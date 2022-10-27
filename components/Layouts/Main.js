@@ -1,9 +1,7 @@
-import { Fragment } from 'react';
-import Container from '../UI/Container';
-import Footer from './Footer/Footer';
-import Header from './Header/Header';
-
-// import classes fr  om './main.module.scss';
+import { Fragment } from "react";
+import Container from "../UI/Container";
+import Footer from "./Footer/Footer";
+import Header from "./Header/Header";
 
 const Main = props => {
   return (

@@ -5,7 +5,6 @@ import classes from "./CartItem.module.scss";
 const CartItem = props => {
   const { id, img, totalPrice, quantity, name, price } = props;
 
-  console.log(img);
   return (
     <li className={classes.productcart}>
       <div className={classes.product__detail}>
@@ -19,8 +18,8 @@ const CartItem = props => {
         price={price}
         id={id}
         name={name}
-        quantity={quantity}
         className={classes.changeInput}
+        quantity={quantity}
       />
     </li>
   );

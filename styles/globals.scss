@@ -226,11 +226,15 @@ body {
   }
 }
 
+.flex-center {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
 .inputChangeItem {
   grid-column: 1 / -1;
-  width: 30% !important;
-  border: none !important;
-  box-shadow: 0 3px 0.3rem rgba($color: #000000, $alpha: 0.2);
+  width: 40% !important;
 
   input {
     font-size: 2.5rem;
@@ -341,12 +345,13 @@ body {
 
   position: fixed;
   z-index: 1500;
-  padding: 2rem 0;
+  padding: 3rem 0 4rem;
   max-width: 500px;
   width: 90%;
   margin: 0 auto;
   left: 0;
   right: 0;
+  max-height: 90%;
 
   transform: translateY(-100%);
   box-shadow: 0 1rem 0.6rem rgba($color: #000000, $alpha: 0.2);
@@ -354,7 +359,6 @@ body {
   overflow-y: auto;
   transition: all 0.2s;
   animation: slide-down 300ms ease-out forwards;
-  height: 80vh;
 
   @media only screen and (min-width: $bp-md) {
     max-width: 500px;

@@ -42,7 +42,7 @@ const ProductItem = props => {
 
   if (!cartItemExisted) {
     cartAddBtn = (
-      <Button className="addbtn" onClick={addToCartHandler}>
+      <Button className="addbtn flex-center" onClick={addToCartHandler}>
         <span className="btnText">Add to Cart</span>
         <GiShoppingCart fontSize="3rem" />
       </Button>

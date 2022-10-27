@@ -2,7 +2,7 @@ import { getSingleProduct } from "../../lib/getSingleProduct";
 import classes from "../../styles/SingleProduct.module.scss";
 
 import ProductDetail from "../../components/Product/SingleProduct/ProductDetail";
-import ProductRelated from "../../Components/Product/SingleProduct/ProductRelated";
+// import ProductRelated from "../../Components/Product/SingleProduct/ProductRelated";
 import SectionTitle from "../../Components/UI/SectionTitle";
 import LoadingSpinner from "../../components/UI/spinners/LoadingSpinner";
 

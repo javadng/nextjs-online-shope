@@ -2,9 +2,9 @@ import { getSingleProduct } from "../../lib/getSingleProduct";
 import classes from "../../styles/SingleProduct.module.scss";
 
 import ProductDetail from "../../components/Product/SingleProduct/ProductDetail";
-import SectionTitle from "../../Components/UI/SectionTitle";
 import LoadingSpinner from "../../components/UI/spinners/LoadingSpinner";
 import ProductRelated from "../../Components/Product/SingleProduct/ProductRelated";
+import SectionTitle from "../../components/UI/SectionTitle";
 
 const SingleProduct = props => {
   const { productData, error } = props;

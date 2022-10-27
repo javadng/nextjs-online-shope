@@ -67,7 +67,7 @@ const ProductItem = props => {
           <AiFillHeart color="red" />
         </div>
       </figure>
-      <Link href={`/${id}`}>
+      <Link href={`/products/${id}`}>
         <span className="productitem--title">{name} &rarr;</span>
       </Link>
       <p className="productitem--desc">{description}</p>

@@ -1,0 +1,45 @@
+@import "../Sass/variables";
+
+.single__product {
+  display: grid;
+  margin: 5rem auto;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  grid-template-rows: repeat(2, max-content);
+
+  @media only screen and (min-width: $bp-md) {
+    grid-template-rows: max-content 1fr;
+    grid-template-columns: minmax(15rem, 25rem) 1fr;
+  }
+}
+
+.detaile {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+
+  @media only screen and (min-width: $bp-md) {
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+  }
+}
+
+.related {
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+
+  @media only screen and (min-width: $bp-md) {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+}
+
+.newProductsTitle {
+  margin-top: 4rem;
+  grid-row: 3 / 4;
+  grid-column: 1 / -1;
+}
+
+.newProducts {
+  grid-row: 4 / 5;
+  grid-column: 1 / -1;
+}

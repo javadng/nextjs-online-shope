@@ -1,6 +1,6 @@
-import classes from './ProductRelated.module.scss';
-import SingleItem from './SingleItem';
-import imgp from '../../../assets/img/photo-1.jpg';
+import classes from "./ProductRelated.module.scss";
+import SingleItem from "./SingleItem";
+import imgp from "../../../public/images/photo-1.jpg";
 
 const ProductRelated = props => {
   const classNameProp = `${classes.related} ${props.className}`;

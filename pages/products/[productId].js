@@ -2,9 +2,9 @@ import { getSingleProduct } from "../../lib/getSingleProduct";
 import classes from "../../styles/SingleProduct.module.scss";
 
 import ProductDetail from "../../components/Product/SingleProduct/ProductDetail";
-// import ProductRelated from "../../Components/Product/SingleProduct/ProductRelated";
 import SectionTitle from "../../Components/UI/SectionTitle";
 import LoadingSpinner from "../../components/UI/spinners/LoadingSpinner";
+import ProductRelated from "../../Components/Product/SingleProduct/ProductRelated";
 
 const SingleProduct = props => {
   const { productData, error } = props;
@@ -13,7 +13,7 @@ const SingleProduct = props => {
   if (productData) {
     pageContent = (
       <div className={classes.single__product}>
-        {/* <ProductRelated className={classes.related} /> */}
+        <ProductRelated className={classes.related} />
         <ProductDetail
           productDetail={productData}
           className={classes.detaile}

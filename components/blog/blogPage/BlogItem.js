@@ -8,7 +8,9 @@ const BlogItem = props => {
   return (
     <div className={classes.blog}>
       <figure className={classes.figureImg}>
-        <Image width={100} height={100} src={props.image} alt="blog" />
+        <div style={{ width: "100%", height: "100%", position: "relative" }}>
+          <Image layout="fill" src={props.image} alt="blog" />
+        </div>
         <div className={classes["meta--time"]}>
           <span className={classes.date}>
             <em>{props.date}</em>

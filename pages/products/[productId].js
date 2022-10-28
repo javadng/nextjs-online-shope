@@ -39,7 +39,7 @@ export async function getServerSideProps(context) {
   try {
     data = await getSingleProduct(params.productId);
   } catch (error) {
-    errorMessage = error;
+    errorMessage = error.message;
   }
   return {
     props: {

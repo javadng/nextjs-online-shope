@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../../store/cart-slice";
 import { uiActions } from "../../../store/ui-slice";
+import ImageSlider from "../../carousel/image-slider";
 import Button from "../../UI/Button";
 import InputChangeNumber from "../../UI/InputChangeNumber";
 
@@ -52,32 +53,30 @@ const ProductDetail = props => {
     );
   };
 
-  const getImgUrlSource = e => {
-    const imgElemUrl = e.target.dataset.imgurl;
+  const getImgUrlSource = imgUrl => {
+    if (!imgUrl) return;
 
-    if (!imgElemUrl) return;
-
-    setImgUrlState(imgElemUrl);
+    setImgUrlState(imgUrl);
   };
 
   return (
     <div className={containerClasses}>
       <div className={classes.product__image}>
         <figure className={classes.figureImg}>
-          <Image src={imgUrlState} alt={name} width={100} height={100} />
-          <div onClick={getImgUrlSource} className={classes.subimages}>
-            {subImgsUrl.map(item => (
-              <Image
-                width={100}
-                height={100}
-                key={item.id}
-                src={item.img}
-                className={classes.subimg}
-                alt={name}
-                data-imgurl={item.img}
-              />
-            ))}
+          <div className={classes.img_wrapper}>
+            <Image
+              src={imgUrlState}
+              alt={name}
+              layout="responsive"
+              width={100}
+              height={100}
+            />
           </div>
+          <ImageSlider
+            onClick={getImgUrlSource}
+            Images={subImgsUrl}
+            className={classes.subimages}
+          />
         </figure>
       </div>
       <div className={classes.detaile}>

@@ -26,13 +26,18 @@
   padding: 0;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 15rem;
+  // grid-template-rows: 1fr 15rem;
   grid-row-gap: 2rem;
 
-  & > img {
-    object-fit: cover;
-    grid-column: 1/-1;
-    grid-row: 1 / -1;
+  @media only screen and (min-width: $bp-md) {
+    grid-template-rows: 1fr 15rem;
+  }
+
+  .img_wrapper {
+    & > img {
+      object-fit: cover;
+      width: 50rem !important;
+    }
   }
 }
 
@@ -152,15 +157,12 @@
 .changeQuantities {
   font-size: 2rem;
   background-color: #fff;
-  border: none;
-  box-shadow: 0 0 0.6rem rgba($color: #000000, $alpha: 0.2);
   height: 5rem;
-  max-width: 10rem;
+  max-width: 15rem;
+  min-width: 10rem;
   border-radius: 2rem;
 
-  @media only screen and (max-width: $bp-md) {
-    width: auto;
-  }
+
 
   @media only screen and (max-width: $bp-xs) {
     max-width: 100%;

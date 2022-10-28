@@ -1,18 +1,21 @@
 import { Fragment } from "react";
 import Link from "next/link";
-import Overlay from "../../UI/Modal/Overlay";
+import Overlay from "../../../components/UI/Modal/Overlay";
 import classes from "./NavMenu.module.scss";
+import { AiFillCloseCircle } from "react-icons/ai";
 
 const NavMenu = props => {
   const navClassActive = props.isActive ? classes.isActive : "";
 
   return (
     <Fragment>
-      {props.isActive && <Overlay onClick={props.onToggleFn} />}
+      {props.isActive && (
+        <Overlay shown={props.isActive} onClick={props.onToggleFn} />
+      )}
       <ul className={`${classes.nav} ${navClassActive}`}>
         {props.isActive && (
           <span className={classes.closeBtn} onClick={props.onToggleFn}>
-            X
+            <AiFillCloseCircle />
           </span>
         )}
         <li className={classes.nav__item}>

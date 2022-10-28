@@ -42,7 +42,7 @@ const InputChangeNumber = props => {
           -
         </span>
       )}
-      <span className={classes.quantity}>{quantity}</span>
+      <b className={classes.quantity}>{quantity}</b>
       <span className={classes.increase} onClick={increaseHandler}>
         +
       </span>

@@ -34,6 +34,8 @@
   .changeNum {
     background-color: transparent;
     border: none;
+    width: auto;
+    font-size: 2rem;
 
     @media only screen and (max-width: $bp-md) {
       grid-row: 2 / 3;
@@ -42,7 +44,7 @@
       font-size: 2.5rem;
     }
 
-    input {
+    b {
       display: none;
     }
   }

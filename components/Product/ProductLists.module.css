@@ -1,0 +1,30 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.gridlist {
+  padding: 1rem;
+  grid-column: 1 / -1;
+}
+
+@media only screen and (min-width: 75em) {
+  .gridlist {
+    grid-column: 2 / -1;
+  }
+}
+
+.producSection {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2rem;
+  -ms-grid-columns: minmax(15rem, 25rem) 1fr;
+      grid-template-columns: minmax(15rem, 25rem) 1fr;
+}
+
+.pagination {
+  grid-column: 1 / -1;
+}
+/*# sourceMappingURL=ProductLists.module.css.map */

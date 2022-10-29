@@ -1,0 +1,122 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.nav {
+  position: fixed;
+  width: 380px;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  color: #fff;
+  font-size: 2rem;
+  padding: 5rem 2rem;
+  background-color: #1d1d1d;
+  z-index: 1000;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+@media only screen and (max-width: 37.5em) {
+  .nav {
+    width: 250px;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .nav {
+    position: static;
+    background-color: transparent;
+    color: #1d1d1d;
+    width: 100%;
+    text-align: center;
+    height: auto;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+.nav li {
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.nav li .activeLink {
+  color: #ef3939;
+}
+
+.nav li .activeLink::after {
+  color: #ef3939;
+  width: 100%;
+}
+
+@media only screen and (max-width: 48em) {
+  .nav li .activeLink::after {
+    width: 0;
+  }
+}
+
+.nav li a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.nav li a::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: #ff5252;
+}
+
+.nav li a:hover {
+  color: #ef3939;
+}
+
+.nav li a:hover::after {
+  width: 100%;
+}
+
+@media only screen and (min-width: 48em) {
+  .nav li {
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+.isActive {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+.closeBtn {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+/* txt */
+/*# sourceMappingURL=NavMenu.module.css.map */

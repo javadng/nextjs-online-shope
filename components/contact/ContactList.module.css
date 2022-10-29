@@ -1,0 +1,9 @@
+.contactList {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 5rem;
+  margin: 5rem 0;
+}
+/*# sourceMappingURL=ContactList.module.css.map */

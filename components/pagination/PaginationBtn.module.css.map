@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,kBAAkB;AACJ,WAAW;AACT,WAAW;AACb,WAAW;AACX,WAAW;AACX,YAAY;AAE1B,YAAY;ADLZ,AAAA,QAAQ,CAAC;EACP,OAAO,EAAE,YAAY;EACrB,MAAM,EAAE,QAAQ;EAChB,OAAO,EAAE,IAAI;CACd;;AAED,AAAA,SAAS,CAAC;EACR,gBAAgB,ECCP,OAAO;CDAjB",
+    "sources": [
+        "PaginationBtn.module.scss",
+        "../../Sass/_variables.scss"
+    ],
+    "names": [],
+    "file": "PaginationBtn.module.css"
+}

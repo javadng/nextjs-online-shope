@@ -1,0 +1,52 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.filter {
+  padding: 3rem 2rem;
+  font-size: 2rem;
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 1rem;
+  -webkit-box-shadow: 2px 5px 0.6rem rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 5px 0.6rem rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 48em) {
+  .filter {
+    grid-column: 1 / -1;
+  }
+}
+
+.title {
+  color: #ff5252;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.inputRange {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.filterPrice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #ff5252;
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=FilterItems.module.css.map */

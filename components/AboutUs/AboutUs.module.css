@@ -1,0 +1,51 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.about {
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: #fff;
+  -webkit-transform: translateY(-5rem);
+          transform: translateY(-5rem);
+  -webkit-box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.3);
+  max-width: 90% !important;
+}
+
+.about__title {
+  padding: 2rem 0;
+}
+
+.about__subtitle {
+  color: #383838;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.about__desc {
+  color: #383838;
+  width: 80%;
+  margin: 0 auto 2rem;
+}
+
+.about__btn {
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  margin: 2rem 0;
+  padding: 1.8rem 6rem;
+}
+
+.about__bottom {
+  padding-top: 5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+/*# sourceMappingURL=AboutUs.module.css.map */

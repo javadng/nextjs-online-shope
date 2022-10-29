@@ -1,0 +1,70 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.billing {
+  padding: 2rem 1rem;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  background-color: #fff;
+}
+
+@media only screen and (min-width: 48em) {
+  .billing {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+}
+
+.billing .title {
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.form-row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  -ms-grid-rows: (min-content)[4];
+      grid-template-rows: repeat(4, -webkit-min-content);
+      grid-template-rows: repeat(4, min-content);
+}
+
+.form-row input,
+.form-row textarea {
+  padding: 0.8rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  -webkit-transform: translateY(-0.3rem);
+          transform: translateY(-0.3rem);
+  -webkit-box-shadow: 0 5px 0.5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.form-row textarea {
+  resize: none;
+  grid-column: 1 /-1;
+}
+
+.form-row textarea:focus {
+  outline: none !important;
+}
+/*# sourceMappingURL=billingDetail.module.css.map */

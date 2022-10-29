@@ -1,0 +1,83 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.cart {
+  background-color: #fff;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 4rem 1rem 2rem;
+  text-align: center;
+  -webkit-box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.cart::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: #706fd3;
+}
+
+.cart .title {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-family: 'Roboto';
+  margin: 4rem 0;
+}
+
+.cart .desc {
+  font-style: italic;
+  padding: 0 2rem;
+}
+
+.cart .btn {
+  text-transform: capitalize;
+  border: 1px solid #706fd3;
+  padding: 1.2rem;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: auto;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.cart .btn:hover {
+  background-color: #706fd3;
+  color: #fff;
+}
+
+@media only screen and (min-width: 62em) {
+  .cart--center {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+.cart--center::before, .cart--center .btn:hover {
+  background-color: #33d9b2;
+}
+
+.cart--center .btn {
+  border-color: #33d9b2;
+}
+/*# sourceMappingURL=ContactCart.module.css.map */

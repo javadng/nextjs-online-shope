@@ -1,0 +1,96 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.blogitem {
+  font-size: 1.3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5rem minmax(10rem, 1fr);
+      grid-template-columns: 5rem minmax(10rem, 1fr);
+  -ms-grid-rows: (max-content)[2];
+      grid-template-rows: repeat(2, -webkit-max-content);
+      grid-template-rows: repeat(2, max-content);
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 3rem;
+  -webkit-box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.1);
+}
+
+.blogitem__cat {
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+.blogitem__desc {
+  grid-row: 1 / -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.blogitem__title {
+  text-transform: capitalize;
+}
+
+.blogitem__date {
+  grid-row: 1 / -1;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blogitem__btn {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  font-size: 1.8rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-weight: bold;
+  border: 1px solid #ff5252;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+}
+
+.blogitem__btn:hover {
+  color: #fff;
+  background-color: #ff5252;
+}
+
+.blogitem .day,
+.blogitem .month {
+  display: block;
+  width: 100%;
+  padding: 2rem 1rem;
+  border: 1px solid #eee;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.blogitem .month {
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=BlogItem.module.css.map */

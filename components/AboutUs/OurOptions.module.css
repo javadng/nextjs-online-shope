@@ -1,0 +1,40 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.option {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content minmax(15rem, 20rem);
+      grid-template-columns: -webkit-max-content minmax(15rem, 20rem);
+      grid-template-columns: max-content minmax(15rem, 20rem);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #eee;
+  padding: 2rem 5rem;
+}
+
+.option__text {
+  grid-column: 2 / -1;
+}
+
+.icon {
+  width: 4rem;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2rem;
+  display: block;
+  padding: 1rem 0;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #383838;
+}
+/*# sourceMappingURL=OurOptions.module.css.map */

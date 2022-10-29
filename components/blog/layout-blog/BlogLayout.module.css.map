@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,kBAAkB;AACJ,WAAW;AACT,WAAW;AACb,WAAW;AACX,WAAW;AACX,YAAY;AAE1B,YAAY;ADLZ,AAAA,MAAM,CAAC;EACL,qBAAqB,EAAE,GAAG;EAC1B,SAAS,EAAE,IAAI;EACf,MAAM,EAAE,MAAM;EACd,SAAS,EAAE,IAAI;EACf,QAAQ,EAAE,IAAI;CAMf;;AAJC,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,IAAI;EAPzC,AAAA,MAAM,CAAC;IAQH,qBAAqB,EAAE,oBAAoB,CAAC,GAAG;IAC/C,QAAQ,EAAE,IAAI;GAEjB",
+    "sources": [
+        "BlogLayout.module.scss",
+        "../../../Sass/_variables.scss"
+    ],
+    "names": [],
+    "file": "BlogLayout.module.css"
+}

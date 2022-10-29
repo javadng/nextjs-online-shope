@@ -1,0 +1,58 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.footerlists {
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 48em) {
+  .footerlists {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.title {
+  margin: 3rem 0;
+  font-size: 2.5rem;
+}
+
+.List--item {
+  padding: 1rem 0;
+  margin: 0.5rem 3rem;
+}
+
+.List--item:hover > a {
+  -webkit-transform: translateX(1rem);
+          transform: translateX(1rem);
+}
+
+.List--item:hover > a::before {
+  width: 2.5rem;
+  left: -40px;
+}
+
+.List--item a {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.List--item a::before {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  width: 1.5rem;
+  height: 3px;
+  background-color: #878f99;
+}
+/*# sourceMappingURL=FooterLists.module.css.map */

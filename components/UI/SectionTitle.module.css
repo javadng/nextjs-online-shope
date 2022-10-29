@@ -1,0 +1,48 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.container {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+@media only screen and (min-width: 48em) {
+  .container {
+    font-size: 2rem;
+  }
+}
+
+.title {
+  text-transform: capitalize;
+}
+
+.subtitle {
+  display: inline-block;
+  margin: 1rem auto 5rem;
+  color: #383838;
+  text-transform: uppercase;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 48em) {
+  .subtitle {
+    font-size: 2rem;
+  }
+}
+
+.subtitle::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #878f99;
+  bottom: -10px;
+  left: 0;
+}
+/*# sourceMappingURL=SectionTitle.module.css.map */

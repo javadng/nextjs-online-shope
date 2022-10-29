@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,CAAC;EACf,gBAAgB,EAAE,IAAI;EACtB,OAAO,EAAE,SAAS;EAClB,MAAM,EAAE,cAAc;EACtB,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,CAAC,CAAC,CAAC,CAAC,MAAM,CAAc,kBAAO;CAC5C",
+    "sources": [
+        "WidgetContainer.module.scss"
+    ],
+    "names": [],
+    "file": "WidgetContainer.module.css"
+}

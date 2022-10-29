@@ -1,0 +1,9 @@
+.widgetContainer {
+  background-color: #fff;
+  padding: 2rem 1rem;
+  border: 1px solid #eee;
+  margin-bottom: 2rem;
+  -webkit-box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
+}
+/*# sourceMappingURL=WidgetContainer.module.css.map */

@@ -1,0 +1,17 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.pageBtn {
+  display: inline-block;
+  margin: 0 0.3rem;
+  padding: 1rem;
+}
+
+.isActive {
+  background-color: #ff5252;
+}
+/*# sourceMappingURL=PaginationBtn.module.css.map */

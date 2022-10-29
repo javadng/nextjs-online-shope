@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACR,gBAAgB,EAAE,IAAI;CACvB",
+    "sources": [
+        "blogList.module.scss"
+    ],
+    "names": [],
+    "file": "blogList.module.css"
+}

@@ -1,0 +1,51 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.icons {
+  text-align: center;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #eee;
+}
+
+@media only screen and (min-width: 48em) {
+  .icons {
+    width: 50%;
+  }
+}
+
+.icons svg {
+  cursor: pointer;
+}
+
+.icons .linkedin {
+  color: #3e91c5;
+}
+
+.icons .google {
+  color: #dd4b39;
+}
+
+.icons .twitter {
+  color: #1da1f2;
+}
+
+.icons .facebook {
+  color: #4b70c0;
+}
+/*# sourceMappingURL=Social.module.css.map */

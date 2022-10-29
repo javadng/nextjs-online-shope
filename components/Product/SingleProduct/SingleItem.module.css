@@ -1,0 +1,55 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10rem 1fr;
+      grid-template-columns: 10rem 1fr;
+  font-size: 2rem;
+  padding: 2rem 0;
+  background-color: #fff;
+  margin: 1rem 0;
+  grid-gap: 1rem;
+  border-top: 2px solid #eee;
+}
+
+.item figure {
+  margin-right: 1rem;
+  width: 100%;
+}
+
+.item figure > img {
+  height: 10rem;
+  width: 100%;
+}
+
+.detaile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #515252;
+}
+
+.price {
+  color: #ff5252;
+  font-weight: bold;
+  font-size: 2.5rem;
+  font-family: "Roboto", sans-serif;
+}
+/*# sourceMappingURL=SingleItem.module.css.map */

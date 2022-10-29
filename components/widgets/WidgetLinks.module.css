@@ -1,0 +1,42 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+h3.title {
+  padding: 1rem 0.5rem;
+}
+
+.item {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.item a {
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+}
+
+.item a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #706fd3;
+}
+
+.item a:hover {
+  color: #706fd3;
+}
+
+.item:hover > a::after {
+  width: 100%;
+}
+/*# sourceMappingURL=WidgetLinks.module.css.map */

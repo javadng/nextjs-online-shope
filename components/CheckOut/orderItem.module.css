@@ -1,0 +1,121 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (7rem)[2];
+      grid-template-rows: repeat(2, 7rem);
+  -ms-grid-columns: minmax(9rem, 1fr) (1fr)[2];
+      grid-template-columns: minmax(9rem, 1fr) repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 2rem;
+  margin: 1rem 0;
+}
+
+@media only screen and (min-width: 48em) {
+  .item {
+    -ms-grid-columns: 10rem (6rem)[3];
+        grid-template-columns: 10rem repeat(3, 6rem);
+    -ms-grid-rows: 10rem;
+        grid-template-rows: 10rem;
+    margin: 0.5rem 0;
+    padding-right: 2.5rem;
+  }
+}
+
+.item__img {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 48em) {
+  .item__img {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / 3;
+  }
+}
+
+.item__img > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+.item .changeNum {
+  background-color: transparent;
+  border: none;
+  width: auto;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 48em) {
+  .item .changeNum {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    width: 90%;
+    font-size: 2.5rem;
+  }
+}
+
+.item .changeNum b {
+  display: none;
+}
+
+.item span {
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+}
+
+.item .name {
+  font-weight: bold;
+  display: block;
+}
+
+@media only screen and (max-width: 48em) {
+  .item .name {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    grid-column: 2 / -1;
+    font-size: 2.5rem;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    width: 100%;
+  }
+}
+
+.item .price {
+  color: #ef3939;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
+@media only screen and (max-width: 48em) {
+  .item .price {
+    grid-column: 3 / -1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    font-size: 2.8rem;
+  }
+}
+
+.item .number {
+  font-size: 2rem;
+}
+/*# sourceMappingURL=orderItem.module.css.map */

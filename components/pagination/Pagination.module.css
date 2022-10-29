@@ -1,0 +1,40 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.pageBtns {
+  text-align: center;
+  margin: 6rem 0 3rem;
+}
+
+.btn {
+  padding: 1rem;
+  margin: 0 0.2rem;
+  font-size: 1.8rem;
+}
+
+.btnInfo {
+  background-color: #ff5252;
+  color: #fff;
+}
+
+.isActive {
+  background-color: #ff5252;
+  color: #fff;
+}
+
+.errorBtn {
+  color: #fff;
+  background-color: #ff5252;
+  text-align: center;
+  font-size: 2rem;
+  width: 10rem;
+  height: 5rem;
+  margin: 0 auto;
+  grid-column: 1 / -1;
+  padding: 1rem 0;
+}
+/*# sourceMappingURL=Pagination.module.css.map */

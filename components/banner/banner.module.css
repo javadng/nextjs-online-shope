@@ -1,0 +1,45 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.banner {
+  text-align: center;
+  color: #c9c9c9;
+  background: #666 url("../../public/images/photo-1.jpg") no-repeat center;
+  background-size: cover;
+  height: 40rem;
+  font-size: 2.5rem;
+  background-blend-mode: multiply;
+}
+
+.banner__trand, .banner__title, .banner__info {
+  display: block;
+  padding: 0 2rem;
+}
+
+.banner__trand {
+  display: inline-block;
+  margin-top: 5rem;
+  padding-top: 3rem;
+  text-transform: uppercase;
+}
+
+.banner__title {
+  padding-top: 5rem;
+  color: #fff;
+  font-size: 4rem;
+}
+
+@media only screen and (min-width: 48em) {
+  .banner__title {
+    font-size: 7rem;
+  }
+}
+
+.banner__info {
+  padding-top: 2rem;
+}
+/*# sourceMappingURL=banner.module.css.map */

@@ -1,0 +1,24 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.blogs {
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  max-width: 100%;
+  margin: 2rem 0;
+  font-size: 2rem;
+  grid-gap: 2rem;
+}
+
+@media only screen and (min-width: 48em) {
+  .blogs {
+    -ms-grid-columns: minmax(25rem, 30rem) 1fr;
+        grid-template-columns: minmax(25rem, 30rem) 1fr;
+    grid-gap: 7rem;
+  }
+}
+/*# sourceMappingURL=BlogLayout.module.css.map */

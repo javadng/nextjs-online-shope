@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,kBAAkB;AACJ,WAAW;AACT,WAAW;AACb,WAAW;AACX,WAAW;AACX,YAAY;AAE1B,YAAY;ADLZ,AAAA,SAAS,CAAC;EACR,OAAO,EAAE,IAAI;EAEb,WAAW,EAAE,MAAM;CAKpB;;AAHC,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,IAAI;EALzC,AAAA,SAAS,CAAC;IAMN,WAAW,EAAE,MAAM;GAEtB;;;AAED,AAAA,cAAc,CAAC;EACb,OAAO,EAAE,IAAI;EACb,QAAQ,EAAE,IAAI;EACd,qBAAqB,EAAE,oBAAoB,CAAC,GAAG;CAChD;;AAED,AAAA,WAAW,CAAC;EACV,WAAW,EAAE,MAAM;CACpB",
+    "sources": [
+        "ProductLists.module.scss",
+        "../../Sass/_variables.scss"
+    ],
+    "names": [],
+    "file": "ProductLists.module.css"
+}

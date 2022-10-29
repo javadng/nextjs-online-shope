@@ -1,0 +1,24 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.list {
+  font-size: 1.3rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  margin: 0.5rem;
+  background-color: #706fd3;
+  color: #fff !important;
+  border-radius: 2rem;
+}
+
+.tag:hover {
+  background-color: #ff5252;
+}
+/*# sourceMappingURL=widgetTags.module.css.map */

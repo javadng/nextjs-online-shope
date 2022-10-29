@@ -1,0 +1,194 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.productitem {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (5rem)[8];
+      grid-template-rows: repeat(8, 5rem);
+  grid-gap: 1rem;
+  background-color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 2rem;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0 2px 0.6rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 0.6rem rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.productitem:hover {
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+.productitem:hover > .productitem__img::after {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.productitem:hover .productitem__icons {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.productitem__img {
+  grid-column: 1 / -1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  grid-row: 1 / 5;
+  position: relative;
+}
+
+.productitem__img::after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  width: 100%;
+  height: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.productitem__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.productitem--title {
+  grid-column: 1 / -1;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+  font-size: 2.5rem;
+  display: inline-block;
+  width: 60%;
+  margin: 0 auto;
+  font-weight: bold;
+  line-height: 2;
+  border-radius: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.productitem--title:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #5073db;
+}
+
+.productitem--desc {
+  grid-column: 1 / -1;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 1;
+  grid-row: 6 / 7;
+  font-size: 1.8rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 1rem 2rem;
+}
+
+.productitem__icons {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  z-index: 110;
+  font-size: 5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  -webkit-transform: translateY(5rem);
+          transform: translateY(5rem);
+}
+
+.productitem__icons svg {
+  display: inline-block;
+  margin: 0 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.productitem__icons svg:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.productitem .price {
+  font-size: 4rem;
+  color: #5073db;
+  font-weight: bold;
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 1;
+  grid-row: 7 /8;
+  grid-column: 1 / -1;
+  font-family: "Roboto", sans-serif;
+}
+
+.productitem .addbtn {
+  grid-column: 1 / -1;
+  -ms-grid-row: 8;
+  -ms-grid-row-span: 1;
+  grid-row: 8 / 9;
+  width: 80%;
+  margin: 0 auto;
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: #5073db;
+  color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.productitem .addbtn:hover {
+  color: #fff;
+  background-color: #ff5252;
+}
+
+.productitem .addbtn .btnText {
+  margin: 0 1rem;
+}
+
+.inputChangeItem {
+  grid-column: 1 / -1;
+  width: 30% !important;
+  border: none !important;
+  -webkit-box-shadow: 0 3px 0.3rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 0.3rem rgba(0, 0, 0, 0.2);
+}
+
+.inputChangeItem input {
+  font-size: 2.5rem;
+  text-align: center;
+}
+/*# sourceMappingURL=ProductItem.css.map */

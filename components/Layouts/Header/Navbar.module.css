@@ -1,0 +1,161 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.nav {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 8rem;
+      grid-template-rows: 8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 48em) {
+  .nav {
+    -ms-grid-columns: max-content 1fr 15rem;
+        grid-template-columns: -webkit-max-content 1fr 15rem;
+        grid-template-columns: max-content 1fr 15rem;
+  }
+}
+
+.nav__icons {
+  justify-self: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__iconTitle {
+  margin-left: 1rem;
+}
+
+.nav__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 48em) {
+  .nav__title {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.nav__title img {
+  width: 3rem;
+  margin: 0 1rem;
+}
+
+.nav .cart__quantity {
+  padding: 2rem 1rem;
+  font-size: 2rem;
+}
+
+.nav__toggeler {
+  background-color: #eee;
+  padding: 1rem;
+  line-height: 1rem;
+  height: 4.5rem;
+  width: 5.1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  display: block;
+}
+
+@media only screen and (min-width: 48em) {
+  .nav__toggeler {
+    display: none;
+  }
+}
+
+.nav__toggeler:hover span.toggel--icon::after {
+  top: -1rem;
+}
+
+.nav__toggeler:hover span.toggel--icon::before {
+  top: 1rem;
+}
+
+.nav__toggeler span.isActive--toggel {
+  background-color: transparent !important;
+}
+
+.nav__toggeler span.toggel--icon {
+  position: relative;
+  display: inline-block;
+}
+
+.nav__toggeler span.toggel--icon, .nav__toggeler span.toggel--icon::after, .nav__toggeler span.toggel--icon::before {
+  width: 3rem;
+  height: 2px;
+  background-color: #000;
+  -webkit-transition: all ease 0.1s;
+  transition: all ease 0.1s;
+}
+
+.nav__toggeler span.toggel--icon::after, .nav__toggeler span.toggel--icon::before {
+  position: absolute;
+  content: "";
+}
+
+.nav__toggeler span.toggel--icon::before {
+  top: 0.8rem;
+}
+
+.nav__toggeler span.toggel--icon::after {
+  top: -0.8rem;
+}
+
+.nav__shop--icon {
+  color: #33d9b2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 2rem;
+  -webkit-box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin: 0 1rem;
+  border-radius: 1rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.nav__shop--icon:hover {
+  background-color: #ef3939;
+  color: #fff;
+}
+
+.isActive--toggel::after, .isActive--toggel::before {
+  top: 0 !important;
+}
+
+.isActive--toggel::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.isActive--toggel::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+/*# sourceMappingURL=Navbar.module.css.map */

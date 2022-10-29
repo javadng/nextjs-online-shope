@@ -1,0 +1,68 @@
+/* break points */
+/* 400px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+/* colors */
+.tooltip {
+  z-index: 2000;
+  position: fixed;
+  right: 0.5rem;
+  top: 10vh;
+  font-size: 2rem;
+  color: #fff;
+  width: 30rem;
+  height: auto;
+  font-weight: bold;
+  background-color: #33d9b2;
+  padding: 1rem 2rem 2.5rem;
+  -webkit-animation: slide-left 0.2s ease-out forwards;
+          animation: slide-left 0.2s ease-out forwards;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #e7e7e7;
+  left: 0;
+  bottom: 0;
+}
+
+.tooltip .close {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.error {
+  background-color: #ff5252;
+}
+
+@-webkit-keyframes slide-left {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+  }
+}
+/*# sourceMappingURL=Tooltip.module.css.map */

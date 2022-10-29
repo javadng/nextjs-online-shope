@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,kBAAkB;AACJ,WAAW;AACT,WAAW;AACb,WAAW;AACX,WAAW;AACX,YAAY;AAE1B,YAAY;ADNZ,AAAA,KAAK,CAAC;EACJ,SAAS,EAAE,MAAM;CAClB;;AAED,AAAA,IAAI,CAAC;EACH,OAAO,EAAE,YAAY;EACrB,OAAO,EAAE,WAAW;EACpB,MAAM,EAAE,MAAM;EACd,gBAAgB,ECGL,OAAO;EDFlB,KAAK,EAAE,eAAe;EACtB,aAAa,EAAE,IAAI;CAKpB;;AAXD,AAQE,IARE,AAQD,MAAM,CAAC;EACN,gBAAgB,ECJT,OAAO;CDKf",
+    "sources": [
+        "widgetTags.module.scss",
+        "../../Sass/_variables.scss"
+    ],
+    "names": [],
+    "file": "widgetTags.module.css"
+}

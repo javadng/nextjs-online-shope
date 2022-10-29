@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACE,KADG,CACH,EAAE,AAAA,UAAW,CAAA,GAAG,EAAE;EAChB,gBAAgB,EAAE,IAAI;CACvB",
+    "sources": [
+        "OrderList.module.scss"
+    ],
+    "names": [],
+    "file": "OrderList.module.css"
+}

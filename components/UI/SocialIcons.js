@@ -1,17 +1,15 @@
 import classes from "./Social.module.scss";
+import { BsFacebook, BsLinkedin, BsShareFill, BsTwitter } from "react-icons/bs";
+import { AiFillGooglePlusSquare } from "react-icons/ai";
 
 const SocialIcons = props => {
   return (
     <div className={classes.icons}>
-      icons
-      {/* <FontAwesomeIcon icon={solid('share-alt')} />
-      <FontAwesomeIcon className={classes.facebook} icon={brands('facebook')} />
-      <FontAwesomeIcon className={classes.twitter} icon={brands('twitter')} />
-      <FontAwesomeIcon
-        className={classes.google}
-        icon={brands('google-plus')}
-      />
-      <FontAwesomeIcon className={classes.linkedin} icon={brands('linkedin')} /> */}
+      <BsFacebook color="#4b70c0" />
+      <BsTwitter color="#1da1f2" />
+      <AiFillGooglePlusSquare color="#dd4b39" />
+      <BsLinkedin color="#3e91c5" />
+      <BsShareFill />
     </div>
   );
 };

@@ -3,9 +3,12 @@ import Main from "../components/Layouts/Main";
 import "../styles/globals.scss";
 import store from "../store/index";
 import Head from "next/head";
+import LoadingSpinner from "../components/UI/spinners/LoadingSpinner";
+import { useState, useEffect, Fragment } from "react";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
-  return (
+  const contentPage = (
     <Provider store={store}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,6 +23,27 @@ function MyApp({ Component, pageProps }) {
       </Main>
     </Provider>
   );
+
+  const [loading, setLoading] = useState(false);
+  const Router = useRouter();
+
+  useEffect(() => {
+    const start = () => {
+      setLoading(true);
+    };
+    const end = () => {
+      setLoading(false);
+    };
+    Router.events.on("routeChangeStart", start);
+    Router.events.on("routeChangeComplete", end);
+    Router.events.on("routeChangeError", end);
+    return () => {
+      Router.events.off("routeChangeStart", start);
+      Router.events.off("routeChangeComplete", end);
+      Router.events.off("routeChangeError", end);
+    };
+  }, []);
+  return <Fragment>{loading ? <LoadingSpinner /> : contentPage}</Fragment>;
 }
 
 export default MyApp;

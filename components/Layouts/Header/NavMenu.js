@@ -3,6 +3,7 @@ import Link from "next/link";
 import Overlay from "../../../components/UI/Modal/Overlay";
 import classes from "./NavMenu.module.scss";
 import { AiFillCloseCircle } from "react-icons/ai";
+import Search from "./search";
 
 const NavMenu = props => {
   const navClassActive = props.isActive ? classes.isActive : "";
@@ -79,6 +80,7 @@ const NavMenu = props => {
           </Link>
         </li>
       </ul>
+      <Search />
     </Fragment>
   );
 };

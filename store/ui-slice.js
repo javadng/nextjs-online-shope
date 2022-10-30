@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const uiSlice = createSlice({
   name: "UI",
-  initialState: { notification: null },
+  initialState: { notification: null, searchParam: "" },
   reducers: {
     //methods
     showNotification(state, action) {
@@ -11,6 +11,9 @@ const uiSlice = createSlice({
         title: action.payload.title,
         message: action.payload.message,
       };
+    },
+    setSearchParam(state, action) {
+      state.searchParam = action.payload;
     },
   },
 });

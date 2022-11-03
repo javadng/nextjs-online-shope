@@ -30,6 +30,10 @@
     transform: translate(0);
   }
 
+  &__container {
+    display: flex;
+  }
+
   li {
     padding: 1rem;
     margin: 2rem 0;
@@ -92,4 +96,8 @@
   cursor: pointer;
 }
 
+.search_box > * {
+  text-align: center;
+  margin: 0 auto;
+}
 /* txt */

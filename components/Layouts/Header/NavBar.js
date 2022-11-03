@@ -9,6 +9,7 @@ import Cart from "../../Cart/Cart";
 import Image from "next/image";
 import { GiShoppingCart } from "react-icons/gi";
 import Modal from "../../UI/Modal/Modal";
+import Search from "./search";
 
 const Navbar = props => {
   const [menuIsShown, setMenuIsShowen] = useState(false);

@@ -79,8 +79,10 @@ const NavMenu = props => {
             Contact Us
           </Link>
         </li>
+        <div className={classes.search_box}>
+          <Search />
+        </div>
       </ul>
-      <Search />
     </Fragment>
   );
 };

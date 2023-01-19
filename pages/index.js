@@ -11,6 +11,7 @@ import Modal from "../components/UI/Modal/Modal";
 const HomePage = props => {
   let pageContent;
 
+  console.log(props);
   if (props.error) {
     pageContent = <ErrorMessage message={props.error} />;
   }
@@ -49,6 +50,7 @@ export async function getStaticProps() {
 
   try {
     productData = await getProductList();
+
     blogPosts = await getBlogsList();
   } catch (error) {
     errorMessage = error.message || "Error with getting data💥💥.";

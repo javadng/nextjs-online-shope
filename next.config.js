@@ -7,7 +7,7 @@ const nextConfig = {
   },
   env: {
     apiUrl:
-      "https://onlineshop-9ab57-default-rtdb.asia-southeast1.firebasedatabase.app",
+      "https://onlineshop-9ab57-default-rtdb.asia-southeast1.firebasedatabase.app/",
   },
 };
 

@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useState } from "react";
 
 const initialState = {
   filterdItems: [],
@@ -10,9 +10,11 @@ const useFilter = () => {
   const filterItemsHandler = useCallback(
     (allItems, filterPrice) => {
       setfilterdItems({
-        filterdItems: allItems.filter(item => item.price <= filterPrice),
-        maxPrices: Math.max(...allItems.map(p => p.price)),
-        minPrices: Math.min(...allItems.map(p => p.price)),
+        filterdItems: allItems.filter(
+          item => +item.price.replace("$", "") <= filterPrice
+        ),
+        maxPrices: Math.max(...allItems.map(p => p.price.replace("$", ""))),
+        minPrices: Math.min(...allItems.map(p => p.price.replace("$", ""))),
       });
     },
     [setfilterdItems]

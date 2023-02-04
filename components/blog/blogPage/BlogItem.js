@@ -1,34 +1,42 @@
 import Image from "next/image";
 import Link from "next/link";
+import parse from "html-react-parser";
 import classes from "./BlogItem.module.scss";
 
 const BlogItem = props => {
+  const postDate = new Date(props.date);
+  const formatedDate = new Intl.DateTimeFormat("en-US", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  }).format(postDate);
+
   const btnClasses = `${classes.blog__btn} btn`;
+  const content = parse(props.content);
+
+  const paragraph = content.find(item => item.type === "p");
+  const figure = content.find(item => item.type === "figure");
+  const imgeElem = figure.props.children;
 
   return (
     <div className={classes.blog}>
       <figure className={classes.figureImg}>
-        <div style={{ width: "100%", height: "100%", position: "relative" }}>
-          <Image layout="fill" src={props.image} alt="blog" />
-        </div>
+        {imgeElem}
         <div className={classes["meta--time"]}>
           <span className={classes.date}>
-            <em>{props.date}</em>
+            <em>{formatedDate}</em>
           </span>
-          <span className={classes.year}>{props.year}</span>
         </div>
       </figure>
       <header>
         <h2 className={classes.title}>
-          <Link href={`/blog/${props.id}`}>{props.title}</Link>
+          <Link href={props.uri}>{props.title}</Link>
         </h2>
       </header>
-      <article>
-        <p>{props.desc}</p>
-      </article>
+      <article>{paragraph}</article>
       <footer>
-        <Link href={`/blog/${props.id}`}>
-          <a className={btnClasses}>READ more</a>
+        <Link href={props.uri}>
+          <span className={btnClasses}>READ more</span>
         </Link>
       </footer>
     </div>
@@ -36,3 +44,8 @@ const BlogItem = props => {
 };
 
 export default BlogItem;
+
+/*
+
+
+*/

@@ -51,7 +51,7 @@ const NavMenu = props => {
         </li>
         <li className={classes.nav__item}>
           <Link
-            href="/blog"
+            href="/blogs"
             className={({ isActive }) =>
               isActive ? `${classes.activeLink}` : ""
             }

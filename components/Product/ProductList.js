@@ -34,11 +34,11 @@ const ProductList = props => {
     productContent = filterState.filterdItems?.map(product => (
       <ProductItem
         key={product.id}
-        img={product.imgUrl}
+        img={product.image.sourceUrl}
         id={product.id}
         name={product.name}
         price={product.price}
-        description={product.description}
+        description={product.shortDescription}
       />
     ));
   }

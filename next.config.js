@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["s6.uupload.ir"],
+    domains: ["localhost"],
   },
   env: {
     apiUrl:

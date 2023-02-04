@@ -13,15 +13,14 @@ const BlogList = props => {
 
   let pageContent = (
     <Fragment>
-      {posts.map(item => (
+      {posts.map((item, index) => (
         <BlogItem
-          image={item.image}
+          content={item.content}
+          uri={item.uri}
           title={item.title}
           date={item.date}
-          year={item.year}
           id={item.id}
           key={item.id}
-          desc={item.desc}
         />
       ))}
       <Pagination

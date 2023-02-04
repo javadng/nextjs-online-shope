@@ -1,7 +1,8 @@
 import BlogList from "../../components/blog/blogPage/BlogList";
 import SideBar from "../../components/blog/blogPage/SideBar";
 import ErrorMessage from "../../components/UI/ErrorMessage";
-import getBlogsList from "../../lib/getBlogsList";
+import { gql } from "@apollo/client";
+import { client } from "../../lib/apollo";
 
 const BolgPage = props => {
   if (props.error) {
@@ -21,19 +22,34 @@ const BolgPage = props => {
 export default BolgPage;
 
 export async function getStaticProps() {
-  let propsContent, errorMessage;
+  let data, errorMessage;
 
   try {
-    const blogData = await getBlogsList();
+    const GET_BLOGS = gql`
+      query GET_BLOGS {
+        posts {
+          nodes {
+            content
+            date
+            id
+            uri
+            title
+          }
+        }
+      }
+    `;
 
-    propsContent = blogData;
+    const result = await client.query({ query: GET_BLOGS });
+    if (!result?.data?.posts) throw new Error("No data.");
+
+    data = result.data.posts.nodes;
   } catch (error) {
     errorMessage = error.message || "Error with getting data💥💥.";
   }
 
   return {
     props: {
-      content: propsContent || null,
+      content: data || null,
       error: errorMessage || null,
     },
     revalidate: 3600,

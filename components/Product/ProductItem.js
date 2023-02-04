@@ -4,7 +4,7 @@ import { cartActions } from "../../store/cart-slice";
 import { GiShoppingCart } from "react-icons/gi";
 import { AiFillHeart } from "react-icons/ai";
 import Link from "next/link";
-
+import parse from "html-react-parser";
 import Button from "../UI/Button";
 import InputChangeNumber from "../UI/InputChangeNumber";
 import React from "react";
@@ -12,14 +12,13 @@ import Image from "next/image";
 
 const ProductItem = props => {
   const dispatch = useDispatch();
-
   const { items } = useSelector(state => state.cart);
 
   const { name, description, price, id } = props;
-
   const cartItemExisted = items.find(item => item.id === id);
-
   let cartAddBtn;
+
+  const descriptionHtml = parse(description);
 
   const addToCartHandler = () => {
     dispatch(
@@ -59,10 +58,20 @@ const ProductItem = props => {
     );
   }
 
+  const imageLoader = ({ src, width, quality }) => {
+    // return src;
+    return `${src}?w=${width}`;
+  };
+
   return (
     <div className="productitem">
       <figure className="productitem__img">
-        <Image src={props.img} layout="fill" alt="product item" />
+        <Image
+          loader={imageLoader}
+          src={props.img}
+          layout="fill"
+          alt="product item"
+        />
         <div className="productitem__icons">
           <AiFillHeart color="red" />
         </div>
@@ -70,8 +79,8 @@ const ProductItem = props => {
       <Link href={`/products/${id}`}>
         <span className="productitem--title">{name} &rarr;</span>
       </Link>
-      <p className="productitem--desc">{description}</p>
-      <span className="price">${price.toFixed(2)}</span>
+      <div className="productitem--desc">{descriptionHtml}</div>
+      <span className="price">{price}</span>
       {cartAddBtn}
     </div>
   );

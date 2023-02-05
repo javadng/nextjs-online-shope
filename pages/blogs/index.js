@@ -2,7 +2,7 @@ import BlogList from "../../components/blog/blogPage/BlogList";
 import SideBar from "../../components/blog/blogPage/SideBar";
 import ErrorMessage from "../../components/UI/ErrorMessage";
 import { gql } from "@apollo/client";
-import { client } from "../../lib/apollo";
+import client from "../../lib/apollo";
 
 const BolgPage = props => {
   if (props.error) {

@@ -58,7 +58,7 @@ const ProductItem = props => {
     );
   }
 
-  const imageLoader = ({ src, width, quality }) => {
+  const imageLoader = ({ src, width }) => {
     // return src;
     return `${src}?w=${width}`;
   };
@@ -76,7 +76,7 @@ const ProductItem = props => {
           <AiFillHeart color="red" />
         </div>
       </figure>
-      <Link href={`/products/${id}`}>
+      <Link href={props.uri}>
         <span className="productitem--title">{name} &rarr;</span>
       </Link>
       <div className="productitem--desc">{descriptionHtml}</div>

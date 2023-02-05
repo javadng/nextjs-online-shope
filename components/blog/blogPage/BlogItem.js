@@ -2,14 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import parse from "html-react-parser";
 import classes from "./BlogItem.module.scss";
+import formatDate from "../../../lib/formatDate";
 
 const BlogItem = props => {
-  const postDate = new Date(props.date);
-  const formatedDate = new Intl.DateTimeFormat("en-US", {
+  const options = {
     day: "2-digit",
     month: "long",
     year: "numeric",
-  }).format(postDate);
+  };
+  const formatedDate = formatDate(props.date, options);
 
   const btnClasses = `${classes.blog__btn} btn`;
   const content = parse(props.content);

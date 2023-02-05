@@ -20,7 +20,7 @@ const HomePage = props => {
     pageContent = (
       <Fragment>
         <Products products={products} />
-        {/* <Blogs blogs={blogsList} /> */}
+        <Blogs blogs={blogsList} />
       </Fragment>
     );
   }
@@ -50,7 +50,7 @@ export async function getStaticProps() {
 
   try {
     const GET_PRODUCTS = gql`
-      query GET_PRODUCTS {
+      query GET_HOME_DATA {
         products {
           nodes {
             date
@@ -67,12 +67,27 @@ export async function getStaticProps() {
             }
           }
         }
+        posts {
+          nodes {
+            date
+            id
+            title
+            uri
+            categories {
+              nodes {
+                slug
+                uri
+              }
+            }
+          }
+        }
       }
     `;
 
     const result = await client.query({ query: GET_PRODUCTS });
 
     productData = result?.data?.products?.nodes;
+    blogPosts = result?.data?.posts?.nodes;
   } catch (error) {
     errorMessage = error.message || "Error with getting data💥💥.";
   }

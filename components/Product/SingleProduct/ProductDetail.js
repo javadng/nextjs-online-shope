@@ -6,14 +6,14 @@ import { uiActions } from "../../../store/ui-slice";
 import ImageSlider from "../../carousel/image-slider";
 import Button from "../../UI/Button";
 import InputChangeNumber from "../../UI/InputChangeNumber";
-
+import parse from "html-react-parser";
 import classes from "./ProductDetail.module.scss";
 import SingleTabs from "./SingleTabs";
+import imageLoader from "../../../lib/image-loader";
 
 const ProductDetail = props => {
   const containerClasses = `${props.className} ${classes.product__container}`;
   const dispatch = useDispatch();
-
   useEffect(() => {
     window.scrollTo({ behavior: "smooth", top: "0px" });
   }, []);
@@ -21,17 +21,22 @@ const ProductDetail = props => {
   const {
     id,
     AdditionalInfo,
-    baseImgUrl,
+    image,
     description,
     name,
+    title,
     price,
     reviews,
-    subImgsUrl,
+    galleryImages,
     viewsInfo,
     quantity,
   } = props.productDetail;
 
-  const [imgUrlState, setImgUrlState] = useState(baseImgUrl);
+  const subImgsUrl = galleryImages.nodes;
+
+  const descriptionElem = parse(description);
+
+  const [imgUrlState, setImgUrlState] = useState(image.sourceUrl);
 
   const increaseHandler = () => {
     dispatch(
@@ -65,6 +70,7 @@ const ProductDetail = props => {
         <figure className={classes.figureImg}>
           <div className={classes.img_wrapper}>
             <Image
+              loader={imageLoader}
               src={imgUrlState}
               alt={name}
               layout="responsive"
@@ -81,13 +87,13 @@ const ProductDetail = props => {
       </div>
       <div className={classes.detaile}>
         <h1 className={classes.title}>{name}</h1>
-        <div className={classes.views}>
+        {/* <div className={classes.views}>
           <span>{viewsInfo.commentsNumber} Comments</span> |
           <span>{viewsInfo.viewsNumber} Views</span>
-        </div>
+        </div> */}
         <div className={classes.productdesc}>
           <span className={classes.price}>${price} ~ $300</span>
-          <p className={classes.desc}>{description}</p>
+          <div className={classes.desc}>{descriptionElem}</div>
         </div>
         <div className={classes.addoptions}>
           <InputChangeNumber
@@ -105,12 +111,12 @@ const ProductDetail = props => {
           </Button>
         </div>
       </div>
-      <SingleTabs
+      {/* <SingleTabs
         reviews={reviews}
         AdditionalInformation={AdditionalInfo}
         desc={description}
         className={classes.tabs}
-      />
+      /> */}
     </div>
   );
 };

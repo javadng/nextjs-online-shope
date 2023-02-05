@@ -4,7 +4,7 @@ import SocialIcons from "../../components/UI/SocialIcons";
 import { AiFillTags } from "react-icons/ai";
 import { Fragment } from "react";
 import { gql } from "@apollo/client";
-import { client } from "../../lib/apollo";
+import client from "../../lib/apollo";
 import parseHtml from "html-react-parser";
 
 const SingleBlog = props => {
@@ -87,6 +87,6 @@ export async function getStaticPaths(context) {
 
   return {
     paths,
-    fallback: true,
+    fallback: "blocking",
   };
 }

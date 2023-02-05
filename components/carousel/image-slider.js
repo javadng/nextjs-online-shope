@@ -10,7 +10,7 @@ const ImageSlider = props => {
     <CarouselProvider
       className={classes.carousel}
       naturalSlideWidth={100}
-      naturalSlideHeight={150}
+      naturalSlideHeight={100}
       totalSlides={props.Images.length + 1}
       visibleSlides={3}
       isPlaying={true}
@@ -24,7 +24,7 @@ const ImageSlider = props => {
             imgWidth={60}
             imgHeight={60}
             className={classes.slideItem}
-            imgUrl={item.img}
+            imgUrl={item.sourceUrl}
           />
         ))}
       </Slider>

@@ -6,6 +6,7 @@
   box-shadow: 0 0 0.6rem rgba($color: #000000, $alpha: 0.2);
   border-radius: 1rem;
   overflow: hidden;
+  margin-bottom: 1.5rem;
 
   @media only screen and (max-width: $bp-md) {
     grid-row: 1 / 2;

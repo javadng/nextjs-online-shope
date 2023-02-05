@@ -7,19 +7,22 @@ import classes from "./BlogList.module.scss";
 const BlogList = props => {
   const { homeBlog } = props;
   const [blogsHomeState, setBlogsHome] = useState(homeBlog);
-
   return (
     <GridList>
-      {blogsHomeState.map(item => (
-        <BlogItem
-          key={item.id}
-          id={item.id}
-          date={item.date}
-          title={item.title}
-          year={item.year}
-          categories={item.categories}
-        />
-      ))}
+      {blogsHomeState.map(item => {
+        const { slug } = item.categories.nodes[0];
+        return (
+          <BlogItem
+            key={item.id}
+            id={item.id}
+            date={item.date}
+            title={item.title}
+            year={item.year}
+            categories={slug}
+            uri={item.uri}
+          />
+        );
+      })}
       <Pagination
         className={classes.PaginationBtn}
         setPostsState={setBlogsHome}

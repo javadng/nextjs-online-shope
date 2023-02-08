@@ -30,7 +30,7 @@ const cartSlice = createSlice({
         state.totalPrice += existingItem.price;
       }
 
-      state.totalPrice.toFixed(2);
+      state.totalPrice = +state.totalPrice.replace("$", "");
     },
     removeItemFromCart(state, action) {
       const id = action.payload;
@@ -47,7 +47,7 @@ const cartSlice = createSlice({
 
       state.totalPrice -= existingItem.price;
 
-      state.totalPrice.toFixed(2);
+      state.totalPrice = +state.totalPrice.replace("$", "");
     },
   },
 });

@@ -1,6 +1,7 @@
 import InputChangeNumber from "../UI/InputChangeNumber";
 import classes from "./orderItem.module.scss";
 import Image from "next/image";
+import imageLoader from "../../lib/image-loader";
 
 const OrderItem = props => {
   const classNames = `${classes.item} ${props.className || ""}`;
@@ -8,7 +9,13 @@ const OrderItem = props => {
   return (
     <li className={classNames}>
       <figure className={classes.item__img}>
-        <Image src={props.image} alt={props.name} width={100} height={100} />
+        <Image
+          loader={imageLoader}
+          src={props.image}
+          alt={props.name}
+          width={100}
+          height={100}
+        />
       </figure>
       <span className={classes.name}>
         {props.name} x {props.number}

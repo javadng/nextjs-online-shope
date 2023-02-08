@@ -17,7 +17,7 @@ const BlogItem = props => {
 
   const paragraph = content.find(item => item.type === "p");
   const figure = content.find(item => item.type === "figure");
-  const imgeElem = figure.props.children;
+  const imgeElem = figure && figure.props.children;
 
   return (
     <div className={classes.blog}>

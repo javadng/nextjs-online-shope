@@ -7,8 +7,11 @@ import ErrorMessage from "../components/UI/ErrorMessage";
 import Modal from "../components/UI/Modal/Modal";
 import { gql } from "@apollo/client";
 import client from "../lib/apollo";
+import { useCookies } from "react-cookie";
 
 const HomePage = props => {
+  const [cookie, setCookie] = useCookies(["user"]);
+
   const { error, products, blogsList } = props;
   let pageContent;
 
@@ -59,6 +62,7 @@ export async function getStaticProps() {
             title
             uri
             image {
+              id
               sourceUrl
             }
             shortDescription

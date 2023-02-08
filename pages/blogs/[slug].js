@@ -14,7 +14,7 @@ const SingleBlog = props => {
   const content = parseHtml(data.content);
 
   const figure = content.find(item => item.type === "figure");
-  const imageElem = figure.props.children;
+  const imageElem = figure && figure.props.children;
   const paragraph = content.find(item => item.type === "p");
 
   return (

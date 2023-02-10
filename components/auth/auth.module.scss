@@ -14,6 +14,13 @@
     position: relative;
   }
 
+  &__error{
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgb(212, 71, 71);
+    display: block;
+  }
+
   .label {
     display: block;
     position: absolute;

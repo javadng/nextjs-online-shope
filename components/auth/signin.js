@@ -1,59 +1,62 @@
-import { useState } from "react";
+import { gql, useMutation } from "@apollo/client";
+import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
-import useHttp from "../../hooks/use-http";
 import classes from "./auth.module.scss";
+import parseHtml from "html-react-parser";
 
-/* 
-https://codedamn.com/news/nextjs/next-js-cookie
-*/
-
-// const WP_COOKIE_NAME = "wordpress_logged_in_d7a0a7d670a130eea74d9e2b098f6dd7";
-const WP_COOKIE_NAME = "wordpress_d7a0a7d670a130eea74d9e2b098f6dd7";
+const query = gql`
+  mutation LoginUser($input: LoginInput!) {
+    login(input: $input) {
+      user {
+        email
+        username
+        jwtAuthToken
+        jwtAuthExpiration
+      }
+    }
+  }
+`;
 
 const SignIn = props => {
   const setCookie = useCookies()[1];
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [login, { data, loading, error }] = useMutation(query);
 
-  const { httpState, sendRequest } = useHttp();
   const usernameChange = e => setUsername(e.target.value);
   const passwordChange = e => setPassword(e.target.value);
+
+  useEffect(() => {
+    if (!error && data?.login) {
+      const { user } = data.login;
+      const userCookie = {
+        email: user.email,
+        jwtAuthExpiration: user.jwtAuthExpiration,
+        jwtAuthToken: user.jwtAuthToken,
+        username: user.username,
+      };
+
+      setCookie("users", userCookie, { maxAge: user.jwtAuthExpiration });
+    }
+  }, [error, data, setCookie]);
 
   const submitHandler = async e => {
     e.preventDefault();
 
-    const query = `
-        mutation LoginUser($input: LoginInput = {password: "${password}", username: "${username}"}) {
-          login(input: $input) {
-            user {
-              email
-              username
-              jwtAuthToken
-              jwtAuthExpiration
-            }
-          }
-        }
-    `;
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ query }),
+    const LoginInput = {
+      username,
+      password,
     };
 
-    sendRequest("http://localhost:10011/graphql", options);
-
-    const { data, error } = httpState;
-
-    if (!error && data.login) {
-      console.log(data);
-      const user = data.login.user;
-      // const cookie = `${user.username}|${user.jwtAuthExpiration}|${user.jwtAuthToken}`;
-      setCookie("users", user, { maxAge: user.jwtAuthExpiration });
-    } else {
-      console.log(error);
+    try {
+      await login({
+        variables: { input: LoginInput },
+      });
+    } catch (err) {
+      console.error(err.message);
     }
+
+    // const cookie = `${user.username}|${user.jwtAuthExpiration}|${user.jwtAuthToken}`;
   };
 
   return (
@@ -85,6 +88,9 @@ const SignIn = props => {
       <button className={classes.btn} type="submit">
         Sign in
       </button>
+      {error && (
+        <span className={classes.auth__error}>{parseHtml(error.message)}</span>
+      )}
     </form>
   );
 };

@@ -92,7 +92,7 @@
   color: #5073db;
 }
 
-.productitem--desc {
+.productitem--desc p {
   grid-column: 1 / -1;
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;

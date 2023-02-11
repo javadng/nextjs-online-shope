@@ -93,6 +93,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -103,9 +106,5 @@
   padding: 1rem;
   text-align: center;
   font-size: 1.5rem;
-}
-
-.meta--time .date {
-  margin-bottom: 2rem;
 }
 /*# sourceMappingURL=BlogItem.module.css.map */

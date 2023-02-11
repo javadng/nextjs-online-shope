@@ -7,11 +7,8 @@ import ErrorMessage from "../components/UI/ErrorMessage";
 import Modal from "../components/UI/Modal/Modal";
 import { gql } from "@apollo/client";
 import client from "../lib/apollo";
-import { useCookies } from "react-cookie";
 
 const HomePage = props => {
-  const [cookie, setCookie] = useCookies(["user"]);
-
   const { error, products, blogsList } = props;
   let pageContent;
 
@@ -50,7 +47,7 @@ export default HomePage;
 
 export async function getStaticProps() {
   let errorMessage, productData, blogPosts;
-
+  console.log(productData);
   try {
     const GET_PRODUCTS = gql`
       query GET_HOME_DATA {
@@ -105,5 +102,3 @@ export async function getStaticProps() {
     revalidate: 3600,
   };
 }
-
-// export async function getStaticPaths() {}

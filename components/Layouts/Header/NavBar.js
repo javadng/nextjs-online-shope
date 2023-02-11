@@ -46,7 +46,11 @@ const Navbar = props => {
           />
           <span className={classes.nav__iconTitle}>Online Shop</span>
         </div>
-        <NavMenu isActive={menuIsShown} onToggleFn={menuToggelerHandler} />
+        <NavMenu
+          menu={props.menu}
+          isActive={menuIsShown}
+          onToggleFn={menuToggelerHandler}
+        />
         <div className={classes.nav__icons}>
           <span
             onClick={modalShownHandler}

@@ -294,16 +294,16 @@ body {
 }
 
 .blogs-page {
-  display: grid;
   grid-template-columns: 1fr;
   max-width: 100%;
   margin: 2rem 0;
   font-size: 2rem;
   grid-gap: 2rem;
-
+  
   @media only screen and (min-width: $bp-md) {
-    grid-template-columns: minmax(25rem, 30rem) 1fr;
-    grid-gap: 7rem;
+    display: grid;
+    grid-template-columns: minmax(20rem, 30rem) 1fr;
+    grid-gap: 2rem;
   }
 }
 
@@ -313,6 +313,11 @@ body {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
   }
+}
+
+.sidebar {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
 }
 
 .overlay {
@@ -459,4 +464,15 @@ body {
 
 .warning-color {
   color: $royalred;
+}
+.activeLink {
+  color: $red;
+  &::after {
+    color: $red;
+    width: 100%;
+
+    @media only screen and (max-width: $bp-md) {
+      width: 0;
+    }
+  }
 }

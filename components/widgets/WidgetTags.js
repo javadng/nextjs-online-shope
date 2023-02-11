@@ -9,7 +9,7 @@ const WidgetTags = props => {
       <div className={classes.list}>
         {props.Tags.map(tag => (
           <Link key={tag.id} href={tag.link}>
-            <a className={classes.tag}>{tag.title}</a>
+            <span className={classes.tag}>{tag.title}</span>
           </Link>
         ))}
       </div>

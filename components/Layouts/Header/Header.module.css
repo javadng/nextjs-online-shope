@@ -1,6 +1,10 @@
 .header {
   font-size: 1.8rem;
   background-color: #fff;
-  padding: 2.5rem 0 1rem;
+  padding: 1rem 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 700;
 }
 /*# sourceMappingURL=Header.module.css.map */

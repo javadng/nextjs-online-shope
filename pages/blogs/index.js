@@ -12,8 +12,8 @@ const BolgPage = props => {
   if (!props.error && props.content) {
     return (
       <div className="blogs-page">
-        <SideBar className="sidebar" />
         <BlogList blogs={props.content} />
+        <SideBar className="sidebar" />
       </div>
     );
   }

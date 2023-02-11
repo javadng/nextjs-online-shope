@@ -1,4 +1,4 @@
-@import '../../../Sass/variables';
+@import "../../../Sass/variables";
 
 .nav {
   position: fixed;
@@ -19,7 +19,8 @@
   }
 
   @media only screen and (min-width: $bp-md) {
-    position: static;
+    height: auto;
+    position: sticky;
     background-color: transparent;
     color: #1d1d1d;
     width: 100%;
@@ -32,52 +33,6 @@
 
   &__container {
     display: flex;
-  }
-
-  li {
-    padding: 1rem;
-    margin: 2rem 0;
-
-    .activeLink {
-      color: $red;
-      &::after {
-        color: $red;
-        width: 100%;
-
-        @media only screen and (max-width: $bp-md) {
-          width: 0;
-        }
-      }
-    }
-
-    a {
-      transition: all 0.3s;
-      position: relative;
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -8px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        transition: all 0.2s;
-        background-color: $royalred;
-      }
-
-      &:hover {
-        color: $red;
-
-        &::after {
-          width: 100%;
-        }
-      }
-    }
-
-    @media only screen and (min-width: $bp-md) {
-      display: inline-block;
-      margin: 0;
-    }
   }
 }
 

@@ -4,9 +4,25 @@ import Overlay from "../../../components/UI/Modal/Overlay";
 import classes from "./NavMenu.module.scss";
 import { AiFillCloseCircle } from "react-icons/ai";
 import Search from "./search";
+import NavItem from "./NavItem";
 
 const NavMenu = props => {
   const navClassActive = props.isActive ? classes.isActive : "";
+
+  // console.log(props.menu);
+  let navMenuContent = "Loading...";
+
+  if (props.menu) {
+    navMenuContent = props.menu.map(el => (
+      <NavItem
+        key={el.id}
+        href={el.url}
+        label={el.label}
+        className={classes.nav__item}
+        childrenItems={el.childItems.nodes}
+      />
+    ));
+  }
 
   return (
     <Fragment>
@@ -19,66 +35,7 @@ const NavMenu = props => {
             <AiFillCloseCircle />
           </span>
         )}
-        <li className={classes.nav__item}>
-          <Link
-            href="/"
-            className={({ isActive }) =>
-              isActive ? `${classes.activeLink}` : ""
-            }
-          >
-            Home
-          </Link>
-        </li>
-        <li className={classes.nav__item}>
-          <Link
-            href="/categories"
-            className={({ isActive }) =>
-              isActive ? `${classes.activeLink}` : ""
-            }
-          >
-            Products
-          </Link>
-        </li>
-        <li className={classes.nav__item}>
-          <Link
-            href="/"
-            className={({ isActive }) =>
-              isActive ? `${classes.activeLink}` : ""
-            }
-          >
-            Demo
-          </Link>
-        </li>
-        <li className={classes.nav__item}>
-          <Link
-            href="/blogs"
-            className={({ isActive }) =>
-              isActive ? `${classes.activeLink}` : ""
-            }
-          >
-            Blog
-          </Link>
-        </li>
-        <li className={classes.nav__item}>
-          <Link
-            href="/checkout"
-            className={({ isActive }) =>
-              isActive ? `${classes.activeLink}` : ""
-            }
-          >
-            Order
-          </Link>
-        </li>
-        <li className={classes.nav__item}>
-          <Link
-            href="/contact-us"
-            className={({ isActive }) =>
-              isActive ? `${classes.activeLink}` : ""
-            }
-          >
-            Contact Us
-          </Link>
-        </li>
+        {navMenuContent}
         <div className={classes.search_box}>
           <Search />
         </div>
@@ -88,3 +45,21 @@ const NavMenu = props => {
 };
 
 export default NavMenu;
+
+/* 
+        <li className={classes.nav__item}>
+          <Link
+            href="/categories"
+            className={({ isActive }) =>
+              isActive ? `${classes.activeLink}` : ""
+            }
+          >
+            Products
+          </Link>
+          <ul className={classes.nav__submenu}>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+          </ul>
+        </li>
+*/

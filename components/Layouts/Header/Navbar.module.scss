@@ -17,6 +17,13 @@
 
   &__iconTitle {
     margin-left: 1rem;
+
+    @media only screen and (min-width: $bp-md) {
+      display: none;
+    }
+    @media only screen and (min-width: $bp-lg) {
+      display: inline-block;
+    }
   }
 
   &__title {

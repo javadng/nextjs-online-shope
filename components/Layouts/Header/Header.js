@@ -4,7 +4,7 @@ import Navbar from "./NavBar";
 const Header = props => {
   return (
     <header className={classes.header}>
-      <Navbar />
+      <Navbar menu={props.menu} />
     </header>
   );
 };

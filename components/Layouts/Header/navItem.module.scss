@@ -1,0 +1,84 @@
+@import "../../../Sass/variables";
+.nav__submenu {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  background: #fff;
+  width: 20rem;
+  display: block;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(3rem);
+  padding: 1rem 0.5rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 0.6rem rgba($color: #000000, $alpha: 0.1);
+  @media only screen and (max-width: $bp-md) {
+    display: none;
+  }
+  li {
+    display: block !important;
+    position: relative;
+    text-align: start;
+    border-bottom: 1px solid #f3f3f3 !important;
+    cursor: pointer;
+    padding: 1rem;
+
+    &:last-of-type {
+      border: none !important;
+    }
+  }
+}
+
+li.nav__item {
+  padding: 1rem;
+  margin: 2rem 0;
+  position: relative;
+
+  &:hover .nav__submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .activeLink {
+    color: $red;
+    &::after {
+      color: $red;
+      width: 100%;
+
+      @media only screen and (max-width: $bp-md) {
+        width: 0;
+      }
+    }
+  }
+
+  a {
+    transition: all 0.3s;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      transition: all 0.2s;
+      background-color: $royalred;
+    }
+
+    &:hover {
+      color: $red;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $bp-md) {
+    display: inline-block;
+    margin: 0;
+  }
+}
